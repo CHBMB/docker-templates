@@ -1,39 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Name>Apache-PHP-SSL</Name>
-  <Description>
-    Modification of smdion's Reverse Proxy which is a Apache based web server set up to act as a proxy with basic PHP web server capabilities, modifications are simply the addition of php5-gd, php5-sqlite, php5-intl, addition of a books volume to enable Calibre OPDS PHP Server support, which will allow you to access your Ebook library from Calibre over the web, and automatically email books to your Kindle.  http://blog.slucas.fr/en/oss/calibre-opds-php-server[br][br]
+	<Beta>False</Beta>
+	<Category>Network:Web</Category>
+	<Name>Apache-PHP-SSL</Name>
+	<Support></Support>
+	<Overview>Apache Web Server with PHP and SSL Support</Overview>
+	<Date>2015.05.11</Date>
+	<Project>www.apache.org</Project>
+	<Changes>
+		[center][font size=5]Apache-PHP-SSL Change Log[/font][/center]
+		[font size=4]2015.02.19[/font]
+		- Initial Release
+		
+		[font size=4]2015.05.11[/font]
+		- a2enmod & SSL Support
+	</Changes>
+	<Description>
+    Modification of smdion's Reverse Proxy which is a Apache based web server set up to act as a proxy with basic PHP web server capabilities, modifications are simply the addition of PHP & addition of a books volume to enable Calibre OPDS PHP Server support, which will allow you to access your Ebook library from Calibre over the web, and automatically email books to your Kindle.  http://blog.slucas.fr/en/oss/calibre-opds-php-server[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/config[/b] : this path is used to store the configuration and the SSL certs files of the reverse proxy.[br]
     [b]/web[/b] : this path is the web directory[br]
 	[b]/logs[/b] : this path is the logs directory[br]
 	[b]/books[/b] : this path is the Calibre library directory[br]
-  </Description>
-  <Registry>https://registry.hub.docker.com/u/chbmb/apache-php-ssl/</Registry>
-  <Repository>chbmb/apache-php-ssl</Repository>
-  <BindTime>true</BindTime>
-  <Privileged>false</Privileged>
-  <Networking>
+	</Description>
+	<Registry>https://registry.hub.docker.com/u/chbmb/apache-php-ssl/</Registry>
+	<Repository>chbmb/apache-php-ssl</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Networking>
     <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>80</HostPort>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>443</HostPort>
-        <ContainerPort>443</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Environment>
-    <Variable>
-      <Name></Name>
-      <Value></Value>
-    </Variable>
-  </Environment>
+	<Publish>
+		<Port>
+			<HostPort>81</HostPort>
+			<ContainerPort>80</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+		<Port>
+			<HostPort>443</HostPort>
+			<ContainerPort>443</ContainerPort>
+			<Protocol>tcp</Protocol>
+		</Port>
+	</Publish>
+	</Networking>
+		<Environment>
+			<Variable>
+				<Name></Name>
+				<Value></Value>
+			</Variable>
+		</Environment>
   <Data>
     <Volume>
       <HostDir></HostDir>
