@@ -13,7 +13,7 @@
 		- Initial Release
 		
 		[font size=4]2015.05.11[/font]
-		- a2enmod & SSL Support
+		- a2enmod and SSL Support
 	</Changes>
 	<Description>
     Modification of smdion's Reverse Proxy which is a Apache based web server set up to act as a proxy with basic PHP web server capabilities, modifications are simply the addition of PHP & addition of a books volume to enable Calibre OPDS PHP Server support, which will allow you to access your Ebook library from Calibre over the web, and automatically email books to your Kindle.  http://blog.slucas.fr/en/oss/calibre-opds-php-server[br][br]
