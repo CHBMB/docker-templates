@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+<Category>Network:DNS</Category>
+  <Name>DDClient</Name>
+  <Description>This is a Dockerfile setup for DDClient. Client to update DynDNS service.
+  Edit /config/ddclient.conf[br][br]
+  [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]
+  [b]/config[/b] : this path is used to store the configuration ddclient.[br]
+  </Description>
+  <Overview>DDclient is a Perl client used to update dynamic DNS entries for accounts on Dynamic DNS Network Service Provider.[br]
+  It has the capability to update more than just dyndns and it can fetch your WAN-ipaddress in a few different ways.</Overview>
+  <Support></Support>
+  <Registry>https://registry.hub.docker.com/u/chbmb/ddclient/</Registry>
+  <Repository>chbmb/ddclient</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/ddclient</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI></WebUI>
+  <Banner>http://i.imgur.com/201b2sc.png</Banner>
+  <Icon>http://i.imgur.com/nD6BNRG.png</Icon>
+</Container>
