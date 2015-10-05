@@ -2,8 +2,8 @@
 <Container>
   <Name>cloudflare</Name>
   <Description>Cloudflare dynamic DNS updater.  Taken from the container by tsaikd and xml modified for Unraid.</Description>
-  <Registry>https://registry.hub.docker.com/u/chbmb/cloudflare/</Registry>
-  <Repository>chbmb/cloudflare</Repository>
+  <Registry>https://hub.docker.com/r/tsaikd/cloudflare/</Registry>
+  <Repository>tsaikd/cloudflare</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
