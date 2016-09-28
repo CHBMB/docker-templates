@@ -55,7 +55,7 @@
     </Volume>
   <Volume>
         <HostDir></HostDir>
-        <ContainerDir>/calibre</ContainerDir>
+        <ContainerDir>/books</ContainerDir>
         <Mode>rw</Mode>
       </Volume>
   </Data>
