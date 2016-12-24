@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<Container>
   <Name>watcher</Name>
   <Repository>chbmb/watcher</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/watcher/~/dockerfile/</Registry>
