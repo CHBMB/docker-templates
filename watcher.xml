@@ -1,0 +1,64 @@
+Dashboard
+Main
+Shares
+Users
+Settings
+Plugins
+Docker
+VMs
+Apps
+Tools
+Feedback
+Help
+Info
+Log
+Update Container
+XML
+
+<?xml version="1.0"?>
+  <Name>watcher</Name>
+  <Repository>chbmb/watcher</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/watcher/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/linuxserver/watcher/</Support>
+  <Overview>Watcher is an automated movie NZB searcher and snatcher. You can add a list of wanted movies and Watcher will automatically send the NZB to Sabnzbd or NZBGet. Watcher also has basic post-processing capabilities such as renaming and moving.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:9090]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/watcher-icon.png</Icon>
+  <ExtraParams/>
+  <Description>Watcher is an automated movie NZB searcher and snatcher. You can add a list of wanted movies and Watcher will automatically send the NZB to Sabnzbd or NZBGet. Watcher also has basic post-processing capabilities such as renaming and moving.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort/>
+        <ContainerPort>9090</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/movies</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="Host Path 2" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path 3" Target="/movies" Default="" Mode="rw" Description="Container Path: /movies" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Port 1" Target="9090" Default="9090" Mode="tcp" Description="Container Port: 9090" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/cache/.appdata/watcher" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
+</Container>
