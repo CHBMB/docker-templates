@@ -1,11 +1,20 @@
-<?xml version="1.0"?>
-<Container version="2">
-  <Name>watcher</Name>
-  <Repository>chbmb/watcher</Repository>
-  <Registry>https://hub.docker.com/r/linuxserver/watcher/~/dockerfile/</Registry>
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <Date>2016-12-24</Date>
+  <Changes>
+    [center][img width='300px' src='https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_small.png'][/center]
+ 
+[center][font size=4]Watcher Change Log[/font][/center]
+  
+  [b]24.12.2016:[/b] Release.
+<Name>watcher</Name>
+  <Repository>linuxserver/watcher</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/watcher/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/linuxserver/watcher/</Support>
+  <Support>http://lime-technology.com/forum/index.php?topic=</Support>
   <Overview>Watcher is an automated movie NZB searcher and snatcher. You can add a list of wanted movies and Watcher will automatically send the NZB to Sabnzbd or NZBGet. Watcher also has basic post-processing capabilities such as renaming and moving.&#xD;
 &#xD;
 [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
@@ -18,7 +27,7 @@
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/watcher-icon.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1482586446</DateInstalled>
+   <Project>https://github.com/nosmokingbandit/watcher</Project>
   <Description>Watcher is an automated movie NZB searcher and snatcher. You can add a list of wanted movies and Watcher will automatically send the NZB to Sabnzbd or NZBGet. Watcher also has basic post-processing capabilities such as renaming and moving.&#xD;
 &#xD;
 [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
@@ -53,5 +62,8 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Environment/>
-  </Container>
+<DonateText>Donations</DonateText>
+<DonateLink>https://www.linuxserver.io/index.php/donations/</DonateLink>
+<DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
+<BaseImage>lsiobase/python</BaseImage>
+ </Container>
