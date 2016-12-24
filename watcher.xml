@@ -1,20 +1,3 @@
-Dashboard
-Main
-Shares
-Users
-Settings
-Plugins
-Docker
-VMs
-Apps
-Tools
-Feedback
-Help
-Info
-Log
-Update Container
-XML
-
 <?xml version="1.0"?>
   <Name>watcher</Name>
   <Repository>chbmb/watcher</Repository>
