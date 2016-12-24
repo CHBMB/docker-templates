@@ -8,7 +8,7 @@
  
 [center][font size=4]Watcher Change Log[/font][/center]
   
-  [b]24.12.2016:[/b] Release.
+    [b]24.12.2016:[/b] Release.</Changes>
 <Name>watcher</Name>
   <Repository>linuxserver/watcher</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/watcher/</Registry>
