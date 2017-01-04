@@ -22,7 +22,7 @@
 [br]&#xD;
 [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
 [b]/config[/b] : Storing all h5ai config files [br]&#xD;
-[b]/config/www/files/[/b] : The folder you want to share [br]&#xD;
+[b]/config/www/h5ai/files/[/b] : The folder you want to share [br]&#xD;
 </Description>
   <Networking>
     <Mode>bridge</Mode>
