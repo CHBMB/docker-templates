@@ -42,7 +42,7 @@
     </Volume>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/config/www/files/</ContainerDir>
+      <ContainerDir>/config/www/h5ai/files/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
