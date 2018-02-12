@@ -12,7 +12,7 @@
   <Name>heimdall</Name>
   <Support>https://lime-technology.com/forums/topic/</Support>
   <Description>Heimdall is a way to organise all those links to your most used web sites and web applications in a simple way.</Description>
-  <Project>https://heimdall.site/<Project/>
+  <Project>https://heimdall.site/</Project>
   <Registry>https://hub.docker.com/r/linuxserver/heimdall/</Registry>
   <Repository>linuxserver/heimdall</Repository>
   <Network>bridge</Network>
