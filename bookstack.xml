@@ -9,7 +9,17 @@
   <Privileged>false</Privileged>
   <Support></Support>
   <Project>https://www.bookstackapp.com/</Project>
-  <Overview>BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information.</Overview>
+  <Overview>BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information.[br]
+[b]You need an existing MySQL/MariaDB database to use.  Please see readme in support thread.[/b]
+
+  [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+  [b]/config[/b] : Storing Bookstack config files [br]
+  [b]6789[/b] : The web-interface. [br]
+ [b]DB_HOST[/b]:  Database host IP/Address[br]
+ [b]DB_DATABASE[/b]:  Database Name[br]
+ [b]DB_USER[/b]:  User to connect to MySQL/Mariadb[br]
+ [b]DB_PASS[/b]:  Password for Database user[br]
+ [b]APP_URL[/b]:  URL for external access through reverse proxy (Optional)[br]</Overview>
   <Category/>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/bookstack.xml</TemplateURL>
