@@ -9,7 +9,13 @@
   <Privileged>false</Privileged>
   <Support></Support>
   <Project>https://github.com/morpheus65535/bazarr</Project>
-  <Overview>Bazarr is a companion application to Sonarr and Radarr. It manage and download subtitles based on your requirements. You defined your preferences by TV show or movies and Bazarr take care of everything for you. </Overview>
+  <Overview>Bazarr is a companion application to Sonarr and Radarr. It manage and download subtitles based on your requirements. You defined your preferences by TV show or movies and Bazarr take care of everything for you. 
+
+  [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+  [b]/config[/b] : Storing Bazarr config files [br]
+  [b]80[/b] : The web-interface. [br]
+ [b]/movies[/b]:  Path to Movies[br]
+ [b]/tv[/b]:  Path to TV Series[br]</Overview>
   <Category/>
   <WebUI>http://[IP]:[PORT:6767]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/bazarr.xml</TemplateURL>
