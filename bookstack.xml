@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>bookstack</Name>
+  <Repository>linuxserver/bookstack</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/bookstack/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Project>https://www.bookstackapp.com/</Project>
+  <Overview>BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/bookstack.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/bookstack-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DateInstalled></DateInstalled>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
+  <Description>BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_DATABASE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_PASS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>APP_URL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Appdata" Type="Path" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <Config Name="Database IP" Target="DB_HOST" Default="" Mode="" Description="DB_HOST" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Database Name" Target="DB_DATABASE" Default="" Mode="" Description="DB_DATABASE" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Database User" Target="DB_USER" Default="" Mode="" Description="DB_USER" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Database Password" Target="DB_PASS" Default="" Mode="" Description="DB_PASS" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="External URL" Target="APP_URL" Default="" Mode="" Description="APP_URL" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <BaseImage>lsiobase/alpine.nginx:3.8</BaseImage>
+</Container>
