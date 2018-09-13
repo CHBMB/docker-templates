@@ -19,7 +19,7 @@
   <Category/>
   <WebUI>http://[IP]:[PORT:6767]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/bazarr.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/bazarr-logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/bazarr.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <DonateText>Donations</DonateText>
