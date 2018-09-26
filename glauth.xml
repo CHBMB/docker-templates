@@ -12,7 +12,7 @@
   <Category/>
   <WebUI>http://[IP]:[PORT:]</WebUI>
   <TemplateURL/>
-  <Icon>http://davebrimley.com/assets/img/ldap.png</Icon>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/glauth.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <DonateText/>
