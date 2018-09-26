@@ -12,7 +12,7 @@
   <Category/>
   <WebUI>http://[IP]:[PORT:8888]</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/lock-icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/ldap-auth.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <DateInstalled>1534601000</DateInstalled>
