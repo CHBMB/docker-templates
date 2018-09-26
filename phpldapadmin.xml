@@ -12,7 +12,7 @@
   <Category/>
   <WebUI>https://[IP]:[PORT:443]/</WebUI>
   <TemplateURL/>
-  <Icon>https://i1.wp.com/phpldapadmin.sourceforge.net/wiki/images/d/d4/Logo.jpg</Icon>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/phpldapadmin.jpg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <DateInstalled>1534599763</DateInstalled>
