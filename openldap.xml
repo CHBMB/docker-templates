@@ -12,7 +12,7 @@
   <Category/>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://pbs.twimg.com/profile_images/722736921001201664/zPH8xLZQ_400x400.jpg</Icon>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/openldap.jpg</Icon>
   <ExtraParams/>
   <PostArgs>--loglevel info</PostArgs>
   <DateInstalled>1534599020</DateInstalled>
