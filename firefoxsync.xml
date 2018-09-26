@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>firefoxsync</Name>
+  <Repository>crazymax/firefox-syncserver</Repository>
+  <Registry>https://hub.docker.com/r/crazymax/firefox-syncserver/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/crazymax/firefox-syncserver/</Support>
+  <Project/>
+  <Overview>Firefox Sync Server image based on Python Alpine Linux.</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://lh3.googleusercontent.com/shH5ALdqmZysSU2F5SF52674W7NFP1xtLBZMuzUR5u6Uotbgql3ATFFFhtkJjBCm4R3i=s180</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Firefox Sync Server image based on Python Alpine Linux.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>http://localhost:5000</Value>
+      <Name>SYNCSERVER_PUBLIC_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>FF_SYNCSERVER_SECRET</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>FF_SYNCSERVER_ALLOW_NEW_USERS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>FF_SYNCSERVER_FORCE_WSGI_ENVIRON</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Gunicorn Port" Target="5000" Default="" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="false" Mask="false">5000</Config>
+  <Config Name="Appdata" Target="/data" Default="" Mode="rw,slave" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Public URL" Target="SYNCSERVER_PUBLIC_URL" Default="" Mode="" Description="Must be edited to point to the public URL of your server" Type="Variable" Display="always" Required="false" Mask="false">http://localhost:5000</Config>
+  <Config Name="Secret Key" Target="FF_SYNCSERVER_SECRET" Default="" Mode="" Description="This is a secret key used for signing authentication tokens. It should be long and randomly-generated." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Allow New Users" Target="FF_SYNCSERVER_ALLOW_NEW_USERS" Default="" Mode="" Description="Set this to false to disable new-user signups on the server. Only request by existing accounts will be honoured" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Force WSGI" Target="FF_SYNCSERVER_FORCE_WSGI_ENVIRON" Default="" Mode="" Description="Set this to true to work around a mismatch between public_url and the application URL as seen by python, which can happen in certain reverse-proxy hosting setups" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+</Container>
