@@ -13,7 +13,7 @@
   <Category/>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://cdn2.iconfinder.com/data/icons/amazon-aws-stencils/100/Storage__Content_Delivery_Amazon_S3-512.png</Icon>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/s3cmd.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
