@@ -13,7 +13,7 @@
   <Category/>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://lh3.googleusercontent.com/shH5ALdqmZysSU2F5SF52674W7NFP1xtLBZMuzUR5u6Uotbgql3ATFFFhtkJjBCm4R3i=s180</Icon>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/firefox.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
