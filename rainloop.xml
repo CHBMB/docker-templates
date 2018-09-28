@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>rainloop</Name>
+  <Repository>hardware/rainloop</Repository>
+  <Registry>https://hub.docker.com/r/hardware/rainloop/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/hardware/rainloop/</Support>
+  <Project/>
+  <Overview>Rainloop is a simple, modern &amp;amp; fast web-based email client.[br][br]&#xD;
+</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8888]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/rainloop.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Rainloop is a simple, modern &amp;amp; fast web-based email client.[br][br]&#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8888</HostPort>
+        <ContainerPort>8888</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/rainloop/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>25M</Value>
+      <Name>UPLOAD_MAX_SIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>LOG_TO_STDOUT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>128M</Value>
+      <Name>MEMORY_LIMIT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Port" Target="8888" Default="8888" Mode="tcp" Description="Container Port: 8888" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
+  <Config Name="Appdata" Target="/rainloop/data" Default="" Mode="rw" Description="Appdata" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="UID" Target="UID" Default="991 GID=991 UPLOAD_MAX_SIZE=25M LOG_TO_STDOUT=false MEMORY_LIMIT=128M" Mode="" Description="UID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="991 GID=25M LOG_TO_STDOUT=false MEMORY_LIMIT=128M" Mode="" Description="GID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="UPLOAD_MAX_SIZE" Target="UPLOAD_MAX_SIZE" Default="991 GID=25M LOG_TO_STDOUT=128M" Mode="" Description="Attachment size limit" Type="Variable" Display="always" Required="false" Mask="false">25M</Config>
+  <Config Name="LOG_TO_STDOUT" Target="LOG_TO_STDOUT" Default="" Mode="" Description="Enable nginx and php error logs to stdout" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="MEMORY_LIMIT" Target="MEMORY_LIMIT" Default="" Mode="" Description="PHP memory limit" Type="Variable" Display="always" Required="false" Mask="false">128M</Config>
+</Container>
