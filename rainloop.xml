@@ -7,9 +7,14 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/hardware/rainloop/</Support>
-  <Project/>
+  <Support>https://github.com/hardware/mailserver/wiki/Rainloop-initial-configuration</Support>
+  <Project>https://www.rainloop.net/</Project>
   <Overview>Rainloop is a simple, modern &amp;amp; fast web-based email client.[br][br]&#xD;
+&#xD;
+Go to http://IP:PORT//?admin to setup[br][br]&#xD;
+&#xD;
+Username: admin[br]&#xD;
+Password: 12345
 </Overview>
   <Category/>
   <WebUI>http://[IP]:[PORT:8888]</WebUI>
