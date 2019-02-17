@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/linuxserver/unifi-controller/</Registry>
   <Branch>
   <Tag>latest</Tag>
-  <TagDescription>The most recent build version of the Controller software, regardless of release train.  Warning! May be broken or buggy (and often is)</TagDescription>
+  <TagDescription>The most recent build version of the Controller software, regardless of release train.  Warning! May be broken or buggy (and often is!)</TagDescription>
   </Branch>
   <Branch>
   <Tag>LTS</Tag>
