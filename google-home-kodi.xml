@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>google-home-kodi</Name>
+  <Repository>sinedied/googlehomekodi</Repository>
+  <Registry>https://hub.docker.com/r/omertu/googlehomekodi/</Registry>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/OmerTu/GoogleHomeKodi</Support>
+  <Project>https://github.com/OmerTu/GoogleHomeKodi</Project>
+  <Overview>Control Kodi through your Google Home</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8099]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/google-home-kodi.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Control Kodi through your Google Home</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8099</HostPort>
+        <ContainerPort>8099</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>http</Value>
+      <Name>KODI_PROTOCOL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>KODI_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>KODI_IP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>kodi</Value>
+      <Name>KODI_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>kodi</Value>
+      <Name>KODI_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>AUTH_TOKEN</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="8099" Default="" Mode="tcp" Description="Container Port: 8099" Type="Port" Display="always" Required="false" Mask="false">8099</Config>
+  <Config Name="Host Key 1" Target="KODI_PROTOCOL" Default="" Mode="" Description="Container Variable: KODI_PROTOCOL" Type="Variable" Display="always" Required="false" Mask="false">http</Config>
+  <Config Name="Host Key 2" Target="KODI_PORT" Default="" Mode="" Description="Container Variable: KODI_PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Key 3" Target="KODI_IP" Default="" Mode="" Description="Container Variable: KODI_IP" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Key 4" Target="KODI_USER" Default="" Mode="" Description="Container Variable: KODI_USER" Type="Variable" Display="always" Required="false" Mask="false">kodi</Config>
+  <Config Name="Host Key 5" Target="KODI_PASSWORD" Default="" Mode="" Description="Container Variable: KODI_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">kodi</Config>
+  <Config Name="Host Key 6" Target="AUTH_TOKEN" Default="" Mode="" Description="Container Variable: AUTH_TOKEN" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>
