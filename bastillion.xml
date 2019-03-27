@@ -47,5 +47,5 @@ password: changeme</Description>
   <Environment/>
   <Labels/>
   <Config Name="appdata" Target="/opt/bastillion/jetty/bastillion/WEB-INF/classes/keydb" Default="" Mode="rw" Description="appdata" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="webui" Target="8080" Default="" Mode="tcp" Description="webui" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="webui - 8080" Target="8080" Default="" Mode="tcp" Description="webui - 8080" Type="Port" Display="always" Required="false" Mask="false"></Config>
 </Container>
