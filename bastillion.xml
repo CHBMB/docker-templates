@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>bastillion</Name>
+  <Repository>ecosi/bastillion</Repository>
+  <Registry>https://hub.docker.com/r/ecosi/bastillion/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/ecosi/bastillion/</Support>
+  <Project/>
+  <Overview>Bastillion is a web-based SSH console that centrally manages administrative access to systems. Web-based administration is combined with management and distribution of user's public SSH keys.&#xD;
+&#xD;
+username: admin&#xD;
+password: changeme</Overview>
+  <Category>Tools: Network:Management</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/bastillion.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1553718634</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Bastillion is a web-based SSH console that centrally manages administrative access to systems. Web-based administration is combined with management and distribution of user's public SSH keys.&#xD;
+&#xD;
+username: admin&#xD;
+password: changeme</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/opt/bastillion/jetty/bastillion/WEB-INF/classes/keydb</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="appdata" Target="/opt/bastillion/jetty/bastillion/WEB-INF/classes/keydb" Default="" Mode="rw" Description="appdata" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="webui" Target="8080" Default="" Mode="tcp" Description="webui" Type="Port" Display="always" Required="false" Mask="false"></Config>
+</Container>
