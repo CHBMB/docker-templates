@@ -36,8 +36,13 @@ With this application you will not miss content anymore. Click, save, read it wh
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/disks/virtualisation/wallabag-official/images</HostDir>
+      <HostDir></HostDir>
       <ContainerDir>/var/www/wallabag/web/assets/images</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/www/wallabag/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -170,7 +175,8 @@ With this application you will not miss content anymore. Click, save, read it wh
   </Environment>
   <Labels/>
   <Config Name="Webui Port" Target="80" Default="" Mode="tcp" Description="Webui Port" Type="Port" Display="always" Required="false" Mask="false">80</Config>
-  <Config Name="Wallabag Images" Target="/var/www/wallabag/web/assets/images" Default="" Mode="rw" Description="Container Path: /var/www/wallabag/web/assets/images" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Wallabag Data" Target="/var/www/wallabag/data" Default="" Mode="rw" Description="Wallabag data" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Wallabag Images" Target="/var/www/wallabag/web/assets/images" Default="" Mode="rw" Description="Wallabag Images" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MYSQL_ROOT_PASSWORD" Target="MYSQL_ROOT_PASSWORD" Default="" Mode="" Description="Needed for the mariadb container to initialise and for the entrypoint in the wallabag container to create a database and user if its not there" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Needed for the posgres container to initialise and for the entrypoint in the wallabag container to create a database and user if not there" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="Needed for the posgres container to initialise and for the entrypoint in the wallabag container to create a database and user if not there" Type="Variable" Display="always" Required="false" Mask="false"/>
