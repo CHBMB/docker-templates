@@ -11,7 +11,7 @@
   <Overview>A docker image to run phpLDAPadmin</Overview>
   <Category/>
   <WebUI>https://[IP]:[PORT:443]/</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/phpldapadmin.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/phpldapadmin.jpg</Icon>
   <ExtraParams/>
   <PostArgs/>
