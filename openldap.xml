@@ -11,11 +11,10 @@
   <Overview> A docker image to run OpenLDAP, The container default log level is info. Available levels are: none, error, warning, info, debug and trace</Overview>
   <Category/>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/openldap.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/openldap.jpg</Icon>
   <ExtraParams/>
   <PostArgs>--loglevel info</PostArgs>
-  <DateInstalled>1534599020</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description> A docker image to run OpenLDAP, The container default log level is info. Available levels are: none, error, warning, info, debug and trace</Description>
