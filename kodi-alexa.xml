@@ -12,7 +12,7 @@
   <Overview>This is a skill for Amazon Alexa that allows you to control one or more instances of Kodi with your voice.</Overview>
   <Category>MediaApp:Video MediaApp:Music MediaApp:Other Network:Other</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/kodi-alexa.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/kodi-alexa.png</Icon>
   <ExtraParams/>
   <PostArgs/>
