@@ -12,7 +12,7 @@
   <Overview>Gitea: Git with a cup of tea - The goal of this project is to make the easiest, fastest, and most painless way of setting up a self-hosted Git service.</Overview>
   <Category>Backup: Cloud: Productivity: Tools: </Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/gitea.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/gitea.png</Icon>
   <ExtraParams/>
   <PostArgs/>
