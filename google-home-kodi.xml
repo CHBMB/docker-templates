@@ -11,7 +11,7 @@
   <Overview>Control Kodi through your Google Home</Overview>
   <Category/>
   <WebUI>http://[IP]:[PORT:8099]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/google-home-kodi.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/google-home-kodi.png</Icon>
   <ExtraParams/>
   <PostArgs/>
