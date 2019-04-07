@@ -12,7 +12,7 @@
   <Overview>Elasticsearch is a powerful open source search and analytics engine that makes data easy to explore.</Overview>
   <Category/>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/elasticsearch.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/elasticsearch-icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
