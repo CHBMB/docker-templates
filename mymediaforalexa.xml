@@ -12,7 +12,7 @@
   <Overview>A media server that allows you to stream audio files (e.g. music and audiobooks) that are stored on your unRAID server to Alexa enabled devices such as Amazon Echo or Amazon Dot using voice control.</Overview>
   <Category>HomeAutomation: MediaServer:Music</Category>
   <WebUI>http://[IP]:[PORT:52051]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/mymediaforalexa.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/mymediaforalexa.png</Icon>
   <ExtraParams/>
   <PostArgs/>
