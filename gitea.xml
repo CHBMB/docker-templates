@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>gitea</Name>
+  <Repository>gitea/gitea</Repository>
+  <Registry>https://registry.hub.docker.com/u/gitea/gitea/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Project/>
+  <Overview>Gitea: Git with a cup of tea - The goal of this project is to make the easiest, fastest, and most painless way of setting up a self-hosted Git service.</Overview>
+  <Category>Backup: Cloud: Productivity: Tools: </Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/gitea.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Gitea: Git with a cup of tea - The goal of this project is to make the easiest, fastest, and most painless way of setting up a self-hosted Git service.</Description>
+  <Networking>
+    <Mode>docker</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>mysql</Value>
+      <Name>DB_TYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_PASSWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>USER_GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>USER_UID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Git over SSH" Target="22" Default="22" Mode="tcp" Description="Container Port: 22" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="WebUI and Git over HTTP" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="DB_TYPE" Target="DB_TYPE" Default="" Mode="" Description="Container Variable: DB_TYPE" Type="Variable" Display="always" Required="false" Mask="false">mysql</Config>
+  <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="Container Variable: DB_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DB_NAME" Target="DB_NAME" Default="" Mode="" Description="Container Variable: DB_NAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DB_USER" Target="DB_USER" Default="" Mode="" Description="Container Variable: DB_USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DB_PASSWD" Target="DB_PASSWD" Default="" Mode="" Description="Container Variable: DB_PASSWD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Data Storage Path" Target="/data" Default="/mnt/user/appdata/gitea" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="USER_GID" Target="USER_GID" Default="" Mode="" Description="Container Variable: USER_GID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="USER_UID" Target="USER_UID" Default="" Mode="" Description="Container Variable: USER_UID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+</Container>
