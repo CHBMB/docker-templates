@@ -18,7 +18,7 @@ Password: 12345
 </Overview>
   <Category/>
   <WebUI>http://[IP]:[PORT:8888]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/rainloop.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/rainloop.png</Icon>
   <ExtraParams/>
   <PostArgs/>
