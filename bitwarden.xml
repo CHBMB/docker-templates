@@ -3,7 +3,7 @@
   <Name>bitwarden</Name>
   <Repository>mprasil/bitwarden</Repository>
   <Registry>https://hub.docker.com/r/mprasil/bitwarden/</Registry>
-  <Network>docker</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
