@@ -12,12 +12,11 @@
   <Overview/>
   <Category/>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/s3cmd.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/s3cmd.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1536938552</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description/>
