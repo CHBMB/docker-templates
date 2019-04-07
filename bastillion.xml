@@ -15,7 +15,7 @@ username: admin&#xD;
 password: changeme</Overview>
   <Category>Tools: Network:Management</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/bastillion.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/bastillion.png</Icon>
   <ExtraParams/>
   <PostArgs/>
