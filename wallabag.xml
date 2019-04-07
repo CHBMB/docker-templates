@@ -14,7 +14,7 @@
 With this application you will not miss content anymore. Click, save, read it when you want. It saves the content you select so that you can read it when you have time.</Overview>
   <Category>Backup: Tools: Network:Web</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/wallabag.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/wallabag.png</Icon>
   <ExtraParams/>
   <PostArgs/>
