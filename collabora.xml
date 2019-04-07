@@ -12,7 +12,7 @@
   <Overview>Collabora/Code Online Development Edition - an awesome, Online Office suite image suitable for home use. You can use Collabora/Code for your Nextcloud an edit your Office Documents Online!</Overview>
   <Category>Cloud:</Category>
   <WebUI>https://[IP]:[PORT:9980]/loleaflet/dist/admin/admin.html</WebUI>
-  <TemplateURL></TemplateURL>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/collabora.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/collabora.png</Icon>
   <ExtraParams/>
   <PostArgs/>
