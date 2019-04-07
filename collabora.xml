@@ -3,7 +3,7 @@
   <Name>collabora</Name>
   <Repository>collabora/code</Repository>
   <Registry>https://hub.docker.com/r/collabora/code/</Registry>
-  <Network>docker</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
