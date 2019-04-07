@@ -12,7 +12,7 @@
   <Overview>Firefox Sync Server image based on Python Alpine Linux.</Overview>
   <Category/>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/firefoxsync.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/firefox.png</Icon>
   <ExtraParams/>
   <PostArgs/>
