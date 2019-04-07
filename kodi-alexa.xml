@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>kodi-alexa</Name>
+  <Repository>mboeru/kodi-alexa</Repository>
+  <Registry>https://hub.docker.com/r/mboeru/kodi-alexa/</Registry>
+  <Network>docker</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/mboeru/kodi-alexa/</Support>
+  <Project>https://github.com/m0ngr31/kanzi</Project>
+  <Overview>This is a skill for Amazon Alexa that allows you to control one or more instances of Kodi with your voice.</Overview>
+  <Category>MediaApp:Video MediaApp:Music MediaApp:Other Network:Other</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/kodi-alexa.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>This is a skill for Amazon Alexa that allows you to control one or more instances of Kodi with your voice.</Description>
+  <Networking>
+    <Mode>docker</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>KODI_ADDRESS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>KODI_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>KODI_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>KODI_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="Host Path 1" Target="/config" Default="" Mode="rw,slave" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Key 1" Target="KODI_ADDRESS" Default="" Mode="" Description="Container Variable: KODI_ADDRESS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Key 2" Target="KODI_PORT" Default="" Mode="" Description="Container Variable: KODI_PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Key 3" Target="KODI_USERNAME" Default="" Mode="" Description="Container Variable: KODI_USERNAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Key 4" Target="KODI_PASSWORD" Default="" Mode="" Description="Container Variable: KODI_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>
