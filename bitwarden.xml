@@ -12,7 +12,7 @@
   <Overview>This is Bitwarden server API implementation written in rust compatible with upstream Bitwarden clients*, ideal for self-hosted deployment where running official resource-heavy service might not be ideal.</Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/bitwarden.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/bitwarden.png</Icon>
   <ExtraParams/>
   <PostArgs/>
