@@ -3,7 +3,7 @@
   <Name>kodi-alexa</Name>
   <Repository>mboeru/kodi-alexa</Repository>
   <Registry>https://hub.docker.com/r/mboeru/kodi-alexa/</Registry>
-  <Network>docker</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
