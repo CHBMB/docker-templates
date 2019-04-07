@@ -10,7 +10,8 @@
   <Project>https://redis.io/</Project>
   <Overview>Redis is an open source, in-memory data structure store, used as a database, cache and message broker.</Overview>
   <WebUI/>
-  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/redis-icon.png</Icon>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/redis.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/redis.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
