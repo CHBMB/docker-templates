@@ -3,7 +3,7 @@
   <Name>redis</Name>
   <Repository>redis</Repository>
   <Registry>https://registry.hub.docker.com/_/redis/</Registry>
-  <Network>docker</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
