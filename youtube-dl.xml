@@ -12,7 +12,7 @@
   <Overview>Webui for downloading youtube videos onto a server.</Overview>
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:8080]/youtube-dl</WebUI>
-  <TemplateURL></TemplateURL>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/youtube-dl.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/youtubedl.png</Icon>
   <ExtraParams/>
   <PostArgs/>
