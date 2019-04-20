@@ -46,5 +46,5 @@
   <Labels/>
   <Config Name="Host Port 1" Target="389" Default="389" Mode="tcp" Description="Container Port: 389" Type="Port" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Host Port 2" Target="5555" Default="5555" Mode="tcp" Description="Container Port: 5555" Type="Port" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Host Path 1" Target="/config" Default="" Mode="rw,slave" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Path 1" Target="/app/config" Default="" Mode="rw,slave" Description="Container Path: /app/config" Type="Path" Display="always" Required="false" Mask="false"></Config>
 </Container>
