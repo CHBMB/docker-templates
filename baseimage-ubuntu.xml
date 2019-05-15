@@ -12,9 +12,9 @@
   <Overview>LinuxServer.io Ubuntu base image built with S6 overlay.[br][br]&#xD;
 &#xD;
 [b][span style='color: #E80000;']After first pull exec into container and run:[/span][/b][br]&#xD;
-mkdir -p /config/etc/cont-init.d &amp;amp;&amp;amp; \[br]&#xD;
-mkdir -p /config/etc/services.d/baseimage &amp;amp;&amp;amp; \[br]&#xD;
-echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/services.d/baseimage/run &amp;amp;&amp;amp; \[br]&#xD;
+rm -rf /config/etc/cont-init.d/30-config &amp;amp;&amp;amp; \[br]&#xD;
+rm -rf /config/etc/services.d/app/run &amp;amp;&amp;amp; \[br]&#xD;
+echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/services.d/app/run &amp;amp;&amp;amp; \[br]&#xD;
 echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/cont-init.d/30-config[br]&#xD;</Overview>
   <Category>Productivity: Tools: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:]</WebUI>
@@ -28,9 +28,9 @@ echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/cont-init.d/30-c
   <Description>LinuxServer.io Ubuntu base image built with S6 overlay.[br][br]&#xD;
 &#xD;
 [b][span style='color: #E80000;']After first pull exec into container and run:[/span][/b][br]&#xD;
-mkdir -p /config/etc/cont-init.d &amp;amp;&amp;amp; \[br]&#xD;
-mkdir -p /config/etc/services.d/baseimage &amp;amp;&amp;amp; \[br]&#xD;
-echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/services.d/baseimage/run &amp;amp;&amp;amp; \[br]&#xD;
+rm -rf /config/etc/cont-init.d/30-config &amp;amp;&amp;amp; \[br]&#xD;
+rm -rf /config/etc/services.d/app/run &amp;amp;&amp;amp; \[br]&#xD;
+echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/services.d/app/run &amp;amp;&amp;amp; \[br]&#xD;
 echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/cont-init.d/30-config[br]&#xD;</Description>
   <Networking>
     <Mode>docker</Mode>
