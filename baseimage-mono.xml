@@ -9,14 +9,13 @@
   <Privileged>false</Privileged>
   <Support/>
   <Project/>
-  <Overview>&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;LinuxServer.io&amp;lt;/strong&amp;gt; Ubuntu Mono base image built with S6 overlay.&amp;lt;/p&amp;gt;&#xD;
+  <Overview>LinuxServer.io Mono base image built with S6 overlay.[br][br]&#xD;
 &#xD;
-&amp;lt;p&amp;gt;After first pull exec into container and run:&amp;lt;/p&amp;gt;&#xD;
-&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;mkdir -p /config/etc/cont-init.d &amp;amp;amp;&amp;amp;amp;  &amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&#xD;
-&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;mkdir -p /config/etc/services.d/baseimage &amp;amp;amp;&amp;amp;amp;  &amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&#xD;
-&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/services.d/baseimage/run &amp;amp;amp;&amp;amp;amp;  &amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&#xD;
-&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/cont-init.d/30-config&amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&#xD;
-</Overview>
+[b][span style='color: #E80000;']After first pull exec into container and run:[/span][/b][br]&#xD;
+mkdir -p /config/etc/cont-init.d &amp;amp;&amp;amp; \[br]&#xD;
+mkdir -p /config/etc/services.d/baseimage &amp;amp;&amp;amp; \[br]&#xD;
+echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/services.d/baseimage/run &amp;amp;&amp;amp; \[br]&#xD;
+echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/cont-init.d/30-config[br]&#xD;</Overview>
   <Category>Productivity: Tools: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:]</WebUI>
   <TemplateURL/>
@@ -24,34 +23,32 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1557953642</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;LinuxServer.io&amp;lt;/strong&amp;gt; Ubuntu base image built with S6 overlay.&amp;lt;/p&amp;gt;&#xD;
+  <Description>LinuxServer.io Mono base image built with S6 overlay.[br][br]&#xD;
 &#xD;
-&amp;lt;p&amp;gt;After first pull exec into container and run:&amp;lt;/p&amp;gt;&#xD;
-&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;mkdir -p /config/etc/cont-init.d &amp;amp;amp;&amp;amp;amp;  &amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&#xD;
-&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;mkdir -p /config/etc/services.d/baseimage &amp;amp;amp;&amp;amp;amp;  &amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&#xD;
-&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/services.d/baseimage/run &amp;amp;amp;&amp;amp;amp;  &amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&#xD;
-&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/cont-init.d/30-config&amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&#xD;
-</Description>
+[b][span style='color: #E80000;']After first pull exec into container and run:[/span][/b][br]&#xD;
+mkdir -p /config/etc/cont-init.d &amp;amp;&amp;amp; \[br]&#xD;
+mkdir -p /config/etc/services.d/baseimage &amp;amp;&amp;amp; \[br]&#xD;
+echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/services.d/baseimage/run &amp;amp;&amp;amp; \[br]&#xD;
+echo -e '#!/usr/bin/with-contenv bash' &amp;amp;gt; /config/etc/cont-init.d/30-config[br]&#xD;</Description>
   <Networking>
     <Mode>docker</Mode>
     <Publish/>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/disks/virtualisation/appdata/baseimage</HostDir>
+      <HostDir>/mnt/disks/virtualisation/appdata/baseimage-mono</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/disks/virtualisation/appdata/baseimage/30-config</HostDir>
+      <HostDir>/mnt/disks/virtualisation/appdata/baseimage-mono/etc/cont-init.d/30-config</HostDir>
       <ContainerDir>/etc/cont-init.d/30-config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/disks/virtualisation/appdata/baseimage/run</HostDir>
+      <HostDir>/mnt/disks/virtualisation/appdata/baseimage-mono/etc/services.d/app/run</HostDir>
       <ContainerDir>/etc/services.d/app/run</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -71,7 +68,7 @@
   <Labels/>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="appdata" Target="/config" Default="/mnt/disks/virtualisation/appdata/baseimage-dev" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/virtualisation/appdata/baseimage</Config>
-  <Config Name="Config" Target="/etc/cont-init.d/30-config" Default="" Mode="rw" Description="Container Path: /etc/cont-init.d/30-config" Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/virtualisation/appdata/baseimage/30-config</Config>
-  <Config Name="Init" Target="/etc/services.d/app/run" Default="" Mode="rw" Description="Container Path: /etc/services.d/app/run" Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/virtualisation/appdata/baseimage/run</Config>
+  <Config Name="appdata" Target="/config" Default="/mnt/disks/virtualisation/appdata/baseimage-mono" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/virtualisation/appdata/baseimage-mono</Config>
+  <Config Name="Config" Target="/etc/cont-init.d/30-config" Default="" Mode="rw" Description="Container Path: /etc/cont-init.d/30-config" Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/virtualisation/appdata/baseimage-mono/etc/cont-init.d/30-config</Config>
+  <Config Name="Init" Target="/etc/services.d/app/run" Default="" Mode="rw" Description="Container Path: /etc/services.d/app/run" Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/virtualisation/appdata/baseimage-mono/etc/services.d/app/run</Config>
 </Container>
