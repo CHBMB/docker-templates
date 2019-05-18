@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>mstream</Name>
-  <Repository>chbmb/docker-mstream</Repository>
+  <Repository>linuxserver/mstream</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/mstream/</Registry>
   <Network>bridge</Network>
   <MyIP/>
