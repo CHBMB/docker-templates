@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>codimd</Name>
+  <Repository>chbmb/codimd:latest</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/codimd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/xxxxx-support-linuxserverio-codimd/</Support>
+  <Project>https://codimd.web.cern.ch/</Project>
+  <Overview>Codimd gives you access to all your files wherever you are.[br][br]CodiMD is a real-time, multi-platform collaborative markdown note editor. This means that you can write notes with other people on your desktop, tablet or even on the phone. You can sign-in via multiple auth providers like Facebook, Twitter, GitHub and many more on the homepage.</Overview>
+  <Category>Productivity: Tools: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/codimd-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
+  <Description>Codimd gives you access to all your files wherever you are.[br][br]CodiMD is a real-time, multi-platform collaborative markdown note editor. This means that you can write notes with other people on your desktop, tablet or even on the phone. You can sign-in via multiple auth providers like Facebook, Twitter, GitHub and many more on the homepage.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>DATABASE_TYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DATABASE_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DATABASE_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DATABASE_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DATABASE_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DOMAIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Webui" Target="3000" Default="" Mode="tcp" Description="If you wish to access this container from http://{IP}:{PORT} this must be left unchanged.  If you intend to access from behind a reverse proxy, this can be changed safely.  This is a limitation of the way CodiMD works." Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="DATABASE_TYPE" Target="DATABASE_TYPE" Default="" Mode="" Description="postgres or mysql are officially supported, however mariadb and sqlite will work,  CodiMD may not support future upgrades from these." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DATABASE_HOST" Target="DATABASE_HOST" Default="" Mode="" Description="URL or IP or container name (if using a custom network) of your database, ignored if using sqlite" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DATABASE_PORT" Target="DATABASE_PORT" Default="" Mode="" Description="Port number of your database, ignored if using sqlite" Type="Variable" Display="always" Required="false" Mask="false">5432</Config>
+  <Config Name="DATABASE_USER" Target="DATABASE_USER" Default="" Mode="" Description="Name of user to connect to the database, ignored if using sqlite" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DATABASE_PASSWORD" Target="DATABASE_PASSWORD" Default="" Mode="" Description="Password of the above user, ignored if using sqlite" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DOMAIN" Target="DOMAIN" Default="" Mode="" Description="Domain name for your reverse proxy.  eg codimd.server.com" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+</Container>
