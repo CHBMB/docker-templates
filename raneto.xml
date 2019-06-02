@@ -28,7 +28,7 @@ Raneto is an open source Knowledgebase platform that uses static Markdown files 
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>3000</HostPort>
+        <HostPort></HostPort>
         <ContainerPort>3000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -54,7 +54,7 @@ Raneto is an open source Knowledgebase platform that uses static Markdown files 
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Webui" Target="3000" Default="" Mode="tcp" Description="Webui" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="Webui" Target="3000" Default="" Mode="tcp" Description="Webui - Default port 3000" Type="Port" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Appdata" Type="Path" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>

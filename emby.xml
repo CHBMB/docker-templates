@@ -101,10 +101,10 @@ Emby brings together your personal videos, music, photos, and live television.&#
   <Config Name="Movies" Target="/movies" Default="" Mode="rw" Description="Movies" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="TV" Target="/tv" Default="" Mode="rw" Description="TV" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Music" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="HTTP" Target="8096" Default="" Mode="tcp" Description="HTTP" Type="Port" Display="always" Required="false" Mask="false">8096</Config>
-  <Config Name="HTTPS" Target="8920" Default="" Mode="tcp" Description="HTTPS" Type="Port" Display="always" Required="false" Mask="false">8920</Config>
-  <Config Name="DLAN/uPnP" Target="1900" Default="" Mode="tcp" Description="DLAN/uPnP" Type="Port" Display="always" Required="false" Mask="false">1900</Config>
-  <Config Name="Local Network Discovery" Target="7359" Default="" Mode="tcp" Description="Container Port: 7359" Type="Port" Display="always" Required="false" Mask="false">7359</Config>
+  <Config Name="HTTP" Target="8096" Default="" Mode="tcp" Description="HTTP - Default 8096" Type="Port" Display="always" Required="false" Mask="false">8096</Config>
+  <Config Name="HTTPS" Target="8920" Default="" Mode="tcp" Description="HTTPS - Default 8920" Type="Port" Display="always" Required="false" Mask="false">8920</Config>
+  <Config Name="DLAN/uPnP" Target="1900" Default="" Mode="tcp" Description="DLAN/uPnP - Default 1900" Type="Port" Display="always" Required="false" Mask="false">1900</Config>
+  <Config Name="Local Network Discovery" Target="7359" Default="" Mode="tcp" Description="Local Network Discovery - Default 7359" Type="Port" Display="always" Required="false" Mask="false">7359</Config>
   <Config Name="Nvidia Driver Capabilities" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="Nvidia Driver Capabilities" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
   <Config Name="Nvidia Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Nvidia Visible Devices" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="AppData Config Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
