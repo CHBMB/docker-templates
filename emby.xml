@@ -3,7 +3,7 @@
   <Name>emby</Name>
   <Repository>chbmb/emby:stable</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/emby/</Registry>
-  <Network>docker</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
