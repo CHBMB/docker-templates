@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>emby</Name>
-  <Repository>chbmb/emby:stable</Repository>
+  <Repository>lsiodev/emby</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/emby/</Registry>
   <Network>bridge</Network>
   <MyIP/>

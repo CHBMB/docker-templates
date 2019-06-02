@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>dillinger</Name>
-  <Repository>chbmb/dillinger</Repository>
+  <Repository>lsiodev/dillinger</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/dillinger/</Registry>
   <Network>bridge</Network>
   <MyIP/>
