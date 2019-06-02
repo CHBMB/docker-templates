@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>dokuwiki</Name>
-  <Repository>chbmb/dokuwiki</Repository>
+  <Repository>lsiodev/dokuwiki</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/dokuwiki/</Registry>
   <Network>bridge</Network>
   <MyIP/>
