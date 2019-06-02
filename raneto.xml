@@ -15,7 +15,7 @@ Raneto is an open source Knowledgebase platform that uses static Markdown files 
   <Category>Productivity: Tools: Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://github.com/linuxserver/docker-templates/blob/master/raneto.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/raneto-logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/raneto.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
