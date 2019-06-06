@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>zoneminder</Name>
-  <Repository>lsiodev/zoneminder</Repository>
+  <Repository>linuxserver/zoneminder</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/zoneminder</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -13,7 +13,7 @@
 &#xD;
 Monitor your home, office, or wherever you want. Using off the shelf hardware with any camera, you can design a system as large or as small as you need.</Overview>
   <Category>HomeAutomation: Tools: Network:Other Status:Stable</Category>
-  <WebUI/>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <TemplateURL>https://github.com/linuxserver/docker-templates/blob/master/zoneminder.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/zoneminder-icon.png</Icon>
   <ExtraParams/>
@@ -28,7 +28,7 @@ Monitor your home, office, or wherever you want. Using off the shelf hardware wi
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>80</HostPort>
+        <HostPort></HostPort>
         <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -74,7 +74,7 @@ Monitor your home, office, or wherever you want. Using off the shelf hardware wi
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Webui" Target="80" Default="" Mode="tcp" Description="Webui - Default Port 80" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="Webui" Target="80" Default="" Mode="tcp" Description="Webui - Default Port 80" Type="Port" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Data" Target="/data" Default="" Mode="rw" Description="/data - where Zoneminder will record to" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="MariaDB/MySQL Host" Target="DB_HOST" Default="" Mode="" Description="MariaDB/MySQL hostname or IP address" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="MariaDB/MySQL user" Target="DB_USER" Default="" Mode="" Description="MariaDB/MySQL user" Type="Variable" Display="always" Required="false" Mask="false"/>
