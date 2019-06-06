@@ -1,30 +1,8 @@
-
-
 <?xml version="1.0"?>
 <Container version="2">
   <Name>minetest</Name>
   <Repository>linuxserver/minetest:latest</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/minetest/</Registry>
-  <Branch>
-  <Tag>latest</Tag>
-  <TagDescription>latest 5.01 build from Minetest</TagDescription>
-  </Branch>
-  <Branch>
-  <Tag>0.4.16</Tag>
-  <TagDescription>Minetest Version 0.4.16</TagDescription>
-  </Branch>
-  <Branch>
-  <Tag>0.4.15</Tag>
-  <TagDescription>Minetest Version 0.4.15</TagDescription>
-  </Branch>
-   <Branch>
-  <Tag>0.4.14</Tag>
-  <TagDescription>Minetest Version 0.4.14</TagDescription>
-  </Branch>
-  <Branch>
-  <Tag>0.4.13</Tag>
-  <TagDescription>Minetest Version 0.4.13</TagDescription>
-  </Branch>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -39,6 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
+  <DateInstalled>1559846540</DateInstalled>
   <DonateText>Donations</DonateText>
   <DonateLink>https://www.linuxserver.io/donate</DonateLink>
   <Description>Server version of minetest, a free, open source alternative to minecraft.</Description>
@@ -54,14 +33,14 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/config/.minetest</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>CLI_ARGS</Name>
       <Mode/>
     </Variable>
@@ -77,9 +56,9 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Webui" Target="30000" Default="30000" Mode="udp" Description="Server Port - Default is 30000 (UDP)" Type="Port" Display="always" Required="true" Mask="false">30000</Config>
-  <Config Name="Appdata" Target="/config/.minetest" Default="" Mode="rw" Description="Container Path: /config/.minetest" Type="Path" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="CLI_ARGS" Target="CLI_ARGS" Default="" Mode="" Description="For any optional CLi arguments (optional)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
-  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Minetest Port" Target="30000" Default="30000" Mode="udp" Description="Container Port: 30000" Type="Port" Display="always" Required="true" Mask="false">30000</Config>
+  <Config Name="Appdata" Target="/config/.minetest" Default="" Mode="rw" Description="Container Path: /config/.minetest" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="CLI_ARGS" Target="CLI_ARGS" Default="" Mode="" Description="Optional CLI arguments.  See https://wiki.minetest.net/Command_line" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PUID" Target="PGID" Default="100" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
 </Container>
