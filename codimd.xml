@@ -75,7 +75,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Webui" Target="3000" Default="" Mode="tcp" Description="Webui - Default 3000" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="Webui" Target="3000" Default="" Mode="tcp" Description="Webui - Default 3000 If you wish to access this container from http://{IP}:{PORT} this must be left unchanged.  If you intend to access from behind a reverse proxy, this can be changed safely.  This is a limitation of the way CodiMD works" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
   <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="Host address of mysql/mariadb database" Type="Variable" Display="always" Required="false" Mask="false">mariadb</Config>
   <Config Name="DB_PORT" Target="DB_PORT" Default="" Mode="" Description="Port to access mysql/mariadb database" Type="Variable" Display="always" Required="false" Mask="false">3306</Config>
   <Config Name="DB_NAME" Target="DB_NAME" Default="" Mode="" Description="Database name" Type="Variable" Display="always" Required="false" Mask="false"/>
