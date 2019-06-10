@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>pyload</Name>
-  <Repository>linuxserver/pyload</Repository>
+  <Repository>lsiodev/pyload</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/pyload/</Registry>
   <Network>bridge</Network>
   <MyIP/>
