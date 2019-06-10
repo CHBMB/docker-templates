@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>jellyfin</Name>
-  <Repository>linuxserver/jellyfin</Repository>
+  <Repository>lspipepr/jellyfin</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/jellyfin/</Registry>
   <Network>bridge</Network>
   <MyIP/>
