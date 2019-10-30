@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ldap-account-manager</Name>
+  <Repository>ldapaccountmanager/lam:stable</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/LDAPAccountManager/lam</Project>
+  <Overview>LDAP Account Manager (LAM) is a webfrontend for managing entries (e.g. users, groups, DHCP settings) stored in an LDAP directory. LAM was designed to make LDAP management as easy as possible for the user. It abstracts from the technical details of LDAP and allows persons without technical background to manage LDAP entries. If needed, power users may still directly edit LDAP entries via the integrated LDAP browser.</Overview>
+  <Category>Tools: Network:Management Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/ldap-account-manager.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/ldap-account-manager.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>LDAP Account Manager (LAM) is a webfrontend for managing entries (e.g. users, groups, DHCP settings) stored in an LDAP directory. LAM was designed to make LDAP management as easy as possible for the user. It abstracts from the technical details of LDAP and allows persons without technical background to manage LDAP entries. If needed, power users may still directly edit LDAP entries via the integrated LDAP browser.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort/>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/etc/ldap-account-manager</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/var/lib/ldap-account-manager</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Webui" Target="80" Default="" Mode="tcp" Description="Webui" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Host Path 1" Target="/etc/ldap-account-manager" Default="" Mode="rw,slave" Description="Container Path: /etc/ldap-account-manager" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Host Path 2" Target="/var/lib/ldap-account-manager" Default="" Mode="rw,slave" Description="Container Path: /var/lib/ldap-account-manager" Type="Path" Display="always" Required="false" Mask="false"/>
+</Container>

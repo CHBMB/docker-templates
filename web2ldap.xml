@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>web2ldap</Name>
+  <Repository>promera/ldap-web</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://www.web2ldap.de/</Project>
+  <Overview>Full-featured LDAP client running as web application </Overview>
+  <Category>Tools: Network:Management Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:1760]/web2ldap/</WebUI>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/web2ldap.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/web2ldap.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Full-featured LDAP client running as web application </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1760</HostPort>
+        <ContainerPort>1760</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+  <Config Name="Webui" Target="1760" Default="" Mode="tcp" Description="Webui" Type="Port" Display="always" Required="false" Mask="false">1760</Config>
+</Container>
