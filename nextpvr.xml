@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nextpvr</Name>
+  <Repository>nextpvr/nextpvr_amd64</Repository>
+  <Registry/>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://www.nextpvr.com/</Project>
+  <Overview>NextPVR is a personal video recorder application for Microsoft Windows, Linux, Mac and Docker. NextPVR makes it easy to watch or record live TV, and provides great features like series recordings, web scheduling, iPhone/iPad client application, Kodi/Emby integration etc.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8866]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/nextpvr.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>NextPVR is a personal video recorder application for Microsoft Windows, Linux, Mac and Docker. NextPVR makes it easy to watch or record live TV, and provides great features like series recordings, web scheduling, iPhone/iPad client application, Kodi/Emby integration etc.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8866</HostPort>
+        <ContainerPort>8866</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/recordings</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/buffer</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="NextPVR Config folder" Target="/config" Default="" Mode="rw" Description="NextPVR Config folder" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Recordings" Target="/recordings" Default="" Mode="rw" Description="Recordings" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Buffer" Target="/buffer" Default="" Mode="rw" Description="Live tv buffer files" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Webui (Default 8866)" Target="8866" Default="" Mode="tcp" Description="Webui (Default 8866)" Type="Port" Display="always" Required="false" Mask="false">8866</Config>
+</Container>
