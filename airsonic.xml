@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>airsonic</Name>
+  <Repository>linuxserver/airsonic:latest</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/airsonic/</Registry>
+  <Network>docker</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/62456-support-linuxserverio-airsonic/</Support>
+  <Project>https://airsonic.github.io/</Project>
+  <Overview>Airsonic is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.</Overview>
+  <Category>MediaApp:Music MediaServer:Music Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:4040]/</WebUI>
+   <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/airsonic-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText>Donate</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate/</DonateLink>
+  <Description>Airsonic is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.</Description>
+  <Networking>
+    <Mode>docker</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>4040</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/playlists</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/podcasts</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>-Xms256m -Xmx512m</Value>
+      <Name>JAVA_OPTS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="User ID" Target="PUID" Default="99" Mode="" Description="Set to Desired User ID" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="Group ID" Target="PGID" Default="100" Mode="" Description="Set to Desired Group ID" Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+  <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Container Path: /music" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Playlists" Target="/playlists" Default="" Mode="rw" Description="Container Path: /playlists" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Podcasts" Target="/podcasts" Default="" Mode="rw" Description="Container Path: /podcasts" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="JAVA_OPTS" Target="JAVA_OPTS" Default="-Xms256m -Xmx512m" Mode="" Description="Container Variable: JAVA_OPTS" Type="Variable" Display="always" Required="false" Mask="false">-Xms256m -Xmx512m</Config>
+  <Config Name="Port" Target="4040" Default="4040" Mode="tcp" Description="Container Port: 4040" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="AppData Config Path" Target="/config" Default="" Mode="rw,slave" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+</Container>
