@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>authelia</Name>
+  <Repository>authelia/authelia</Repository>
+  <Registry>https://hub.docker.com/r/authelia/authelia/</Registry>
+  <Network>docker</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/authelia/authelia/</Support>
+  <Project/>
+  <Overview>2-factor authentication server using LDAP as 1st factor and TOTP or U2F as 2nd factor   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/authelia.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/authelia.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>2-factor authentication server using LDAP as 1st factor and TOTP or U2F as 2nd factor   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/etc/authelia/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 1" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Path 1" Target="/etc/authelia/" Default="" Mode="rw" Description="Container Path: /etc/authelia/" Type="Path" Display="always" Required="false" Mask="false"></Config>
+</Container>
