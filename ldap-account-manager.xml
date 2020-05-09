@@ -17,6 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
+  <DateInstalled>1589010244</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>LDAP Account Manager (LAM) is a webfrontend for managing entries (e.g. users, groups, DHCP settings) stored in an LDAP directory. LAM was designed to make LDAP management as easy as possible for the user. It abstracts from the technical details of LDAP and allows persons without technical background to manage LDAP entries. If needed, power users may still directly edit LDAP entries via the integrated LDAP browser.</Description>
@@ -24,27 +25,45 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort/>
+        <HostPort></HostPort>
         <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/etc/ldap-account-manager</ContainerDir>
-      <Mode>rw,slave</Mode>
-    </Volume>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/var/lib/ldap-account-manager</ContainerDir>
-      <Mode>rw,slave</Mode>
-    </Volume>
-  </Data>
-  <Environment/>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>LDAP_SERVER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>LDAP_DOMAIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LDAP_BASE_DN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>LDAP_ADMIN_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>LAM_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
   <Labels/>
-  <Config Name="Webui" Target="80" Default="" Mode="tcp" Description="Webui" Type="Port" Display="always" Required="false" Mask="false"/>
-  <Config Name="Host Path 1" Target="/etc/ldap-account-manager" Default="" Mode="rw,slave" Description="Container Path: /etc/ldap-account-manager" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Host Path 2" Target="/var/lib/ldap-account-manager" Default="" Mode="rw,slave" Description="Container Path: /var/lib/ldap-account-manager" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Webui" Target="80" Default="" Mode="tcp" Description="Webui" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="LDAP_SERVER" Target="LDAP_SERVER" Default="" Mode="" Description="Container Variable: LDAP_SERVER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="LDAP_DOMAIN" Target="LDAP_DOMAIN" Default="" Mode="" Description="Container Variable: LDAP_DOMAIN" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="LDAP_BASE_DN" Target="LDAP_BASE_DN" Default="" Mode="" Description="Container Variable: LDAP_BASE_DN" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_ADMIN_USER" Target="LDAP_ADMIN_USER" Default="" Mode="" Description="Container Variable: LDAP_ADMIN_USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="LAM_PASSWORD" Target="LAM_PASSWORD" Default="" Mode="" Description="Container Variable: LAM_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>
