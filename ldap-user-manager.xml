@@ -9,9 +9,11 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/wheelybird/ldap-user-manager/issues</Support>
   <Project>https://github.com/wheelybird/ldap-user-manager</Project>
-  <Overview>A PHP web-based interface for LDAP user account management and self-service password change.</Overview>
+  <Overview>A PHP web-based interface for LDAP user account management and self-service password change.&#xD;
+&#xD;
+After install, go to http(s)://ip-address:port/setup to setup your openldap server.</Overview>
   <Category>Tools: Network:Management Status:Stable</Category>
-  <WebUI/>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/ldap-user-manager.png</Icon>
   <ExtraParams/>
