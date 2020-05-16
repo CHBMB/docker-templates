@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ldap-user-manager</Name>
+  <Repository>wheelybird/ldap-user-manager</Repository>
+  <Registry>https://hub.docker.com/r/wheelybird/ldap-user-manager</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/wheelybird/ldap-user-manager/issues</Support>
+  <Project>https://github.com/wheelybird/ldap-user-manager</Project>
+  <Overview>A PHP web-based interface for LDAP user account management and self-service password change.</Overview>
+  <Category>Tools: Network:Management Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/ldap-user-manager.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>A PHP web-based interface for LDAP user account management and self-service password change.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort/>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort/>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>LDAP_URI</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LDAP_BASE_DN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LDAP_ADMIN_BIND_DN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LDAP_ADMIN_BIND_PWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LDAP_ADMINS_GROUP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>example.com</Value>
+      <Name>SERVER_HOSTNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>FALSE</Value>
+      <Name>NO_HTTPS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>people</Value>
+      <Name>LDAP_USER_OU</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>FALSE</Value>
+      <Name>LDAP_USES_NIS_SCHEMA</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>groups</Value>
+      <Name>LDAP_GROUP_OU</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LDAP_GROUP_MEMBERSHIP_ATTRIBUTE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LDAP_GROUP_MEMBERSHIP_ATTRIBUTE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LDAP_GROUP_MEMBERSHIP_USES_UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>TRUE</Value>
+      <Name>LDAP_REQUIRE_STARTTLS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LDAP_TLS_CACERT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>everybody</Value>
+      <Name>DEFAULT_USER_GROUP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>/bin/bash</Value>
+      <Name>DEFAULT_USER_SHELL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>EMAIL_DOMAIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>{first_name}-{last_name}</Value>
+      <Name>USERNAME_FORMAT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>^[a-z][a-zA-Z0-9._-]{3,32}$</Value>
+      <Name>USERNAME_REGEX</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LOGIN_TIMEOUT_MINS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SITE_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LDAP_DEBUG</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SESSION_DEBUG</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="HTTP" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="HTTPS" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_URI" Target="LDAP_URI" Default="" Mode="" Description="The URI of the LDAP server. e.g. ldap://ldap.example.com or ldaps://ldap.example.com" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_BASE_DN" Target="LDAP_BASE_DN" Default="" Mode="" Description="The base DN for your organisation. e.g. dc=example,dc=com" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_ADMIN_BIND_DN" Target="LDAP_ADMIN_BIND_DN" Default="" Mode="" Description="The DN for the user with permission to modify all records under LDAP_BASE_DN. e.g. cn=admin,dc=example,dc=com" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_ADMIN_BIND_PWD" Target="LDAP_ADMIN_BIND_PWD" Default="" Mode="" Description="The password for LDAP_ADMIN_BIND_DN" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="LDAP_ADMINS_GROUP" Target="LDAP_ADMINS_GROUP" Default="" Mode="" Description="The name of the group used to define accounts that can use this tool to manage LDAP accounts. e.g. admins&#13;&#10;&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="SERVER_HOSTNAME" Target="SERVER_HOSTNAME" Default="example.com" Mode="" Description="The hostname that this interface will be served from." Type="Variable" Display="always" Required="false" Mask="false">example.com</Config>
+  <Config Name="NO_HTTPS" Target="NO_HTTPS" Default="FALSE" Mode="" Description="If you set this to TRUE then the server will run in HTTP mode, without any encryption. This is insecure and should only be used for testing." Type="Variable" Display="always" Required="false" Mask="false">FALSE</Config>
+  <Config Name="LDAP_USER_OU" Target="LDAP_USER_OU" Default="people" Mode="" Description="The name of the OU used to store user accounts (without the base DN appended)." Type="Variable" Display="always" Required="false" Mask="false">people</Config>
+  <Config Name="LDAP_USES_NIS_SCHEMA" Target="LDAP_USES_NIS_SCHEMA" Default="FALSE" Mode="" Description="f you use the NIS schema instead of the (preferable) RFC2307BIS schema, set this to TRUE&#13;&#10;&#13;&#10;See https://github.com/wheelybird/ldap-user-manager#LDAP_USES_NIS_SCHEMA for more info" Type="Variable" Display="always" Required="false" Mask="false">FALSE</Config>
+  <Config Name="LDAP_GROUP_OU" Target="LDAP_GROUP_OU" Default="groups" Mode="" Description="The name of the OU used to store groups (without the base DN appended)." Type="Variable" Display="always" Required="false" Mask="false">groups</Config>
+  <Config Name="LDAP_GROUP_MEMBERSHIP_ATTRIBUTE" Target="LDAP_GROUP_MEMBERSHIP_ATTRIBUTE" Default="" Mode="" Description=" The attribute used when adding a user to a group. If LDAP_USES_NIS_SCHEMA is TRUE the default is memberUID, otherwise it's uniqueMember. Explicitly setting this variable will override the default." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_GROUP_MEMBERSHIP_ATTRIBUTE" Target="LDAP_GROUP_MEMBERSHIP_ATTRIBUTE" Default="" Mode="" Description=" The attribute used when adding a user to a group. If LDAP_USES_NIS_SCHEMA is TRUE the default is memberUID, otherwise it's uniqueMember. Explicitly setting this variable will override the default." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_GROUP_MEMBERSHIP_USES_UID" Target="LDAP_GROUP_MEMBERSHIP_USES_UID" Default="" Mode="" Description="If TRUE then the entry for a member of a group will be just the username. Otherwise it's the member's full DN. If LDAP_USES_NIS_SCHEMA is TRUE the default is TRUE, otherwise it's FALSE. Explicitly setting this variable will override the default." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_REQUIRE_STARTTLS" Target="LDAP_REQUIRE_STARTTLS" Default="TRUE" Mode="" Description=" If TRUE then a TLS connection is required for this interface to work. If set to FALSE then the interface will work without STARTTLS, but a warning will be displayed on the page." Type="Variable" Display="always" Required="false" Mask="false">TRUE</Config>
+  <Config Name="LDAP_TLS_CACERT" Target="LDAP_TLS_CACERT" Default="" Mode="" Description="f you need to use a specific CA certificate for TLS connections to the LDAP server (when LDAP_REQUIRE_STARTTLS is set) then assign the contents of the CA certificate to this variable. e.g. -e LDAP_TLS_CERT=$(&amp;lt;/path/to/ca.crt)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="DEFAULT_USER_GROUP" Target="DEFAULT_USER_GROUP" Default="everybody" Mode="" Description=" The group that new accounts are automatically added to when created. NOTE: If this group doesn't exist then a group is created with the same name as the username and the user is added to that group." Type="Variable" Display="always" Required="false" Mask="false">everybody</Config>
+  <Config Name="DEFAULT_USER_SHELL" Target="DEFAULT_USER_SHELL" Default="/bin/bash" Mode="" Description="The shell that will be launched when the user logs into a server." Type="Variable" Display="always" Required="false" Mask="false">/bin/bash</Config>
+  <Config Name="EMAIL_DOMAIN" Target="EMAIL_DOMAIN" Default="" Mode="" Description="If set then the email address field will be automatically populated in the form of username@email_domain." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="USERNAME_FORMAT" Target="USERNAME_FORMAT" Default="{first_name}-{last_name}" Mode="" Description="The template used to dynamically generate usernames. See https://github.com/wheelybird/ldap-user-manager#username-format" Type="Variable" Display="always" Required="false" Mask="false">{first_name}-{last_name}</Config>
+  <Config Name="USERNAME_REGEX" Target="USERNAME_REGEX" Default="^[a-z][a-zA-Z0-9._-]{3,32}$" Mode="" Description="The regular expression used to ensure a username (and group name) is valid. See https://github.com/wheelybird/ldap-user-manager#username-format" Type="Variable" Display="always" Required="false" Mask="false">^[a-z][a-zA-Z0-9._-]{3,32}$</Config>
+  <Config Name="LOGIN_TIMEOUT_MINS" Target="LOGIN_TIMEOUT_MINS" Default="10" Mode="" Description="How long before an idle session will be timed out." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SITE_NAME" Target="SITE_NAME" Default="LDAP user manager" Mode="" Description=" Change this to replace the title in the menu. e.g. " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_DEBUG" Target="LDAP_DEBUG" Default="FALSE" Mode="" Description="Set to TRUE to increase the logging level for LDAP connections. This will output passwords to the error log - don't enable this in a production environment." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SESSION_DEBUG" Target="SESSION_DEBUG" Default="FALSE" Mode="" Description="Set to TRUE to increase the logging level for sessions and user authorisation. This will output cookie passkeys to the error log - don't enable this in a production environment." Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
