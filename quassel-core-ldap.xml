@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>quassel-ldap</Name>
+    <Repository>linuxserver/quassel-core</Repository>
+    <Registry>https://hub.docker.com/r/linuxserver/quassel-core/</Registry>
+    <Network>bridge</Network>
+    <MyIP/>
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://forums.unraid.net/topic/40888-support-linuxserverio-quassel-core/</Support>
+    <Project>http://quassel-irc.org/</Project>
+    <Overview>Quassel IRC is a modern, cross-platform, distributed IRC client, meaning that one (or multiple) client(s) can attach to and detach from a central core -- much like the popular combination of screen and a text-based IRC client such as WeeChat, but graphical. Blowfish support and optional web-ui included.</Overview>
+    <Category>Network:Messenger</Category>
+    <WebUI/>
+    <TemplateURL/>
+    <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/quassel-ldap.png</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <CPUset/>
+    <DonateText>Donations</DonateText>
+    <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+    <Description>Quassel IRC is a modern, cross-platform, distributed IRC client, meaning that one (or multiple) client(s) can attach to and detach from a central core -- much like the popular combination of screen and a text-based IRC client such as WeeChat, but graphical. Blowfish support and optional web-ui included.</Description>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>4242</HostPort>
+                <ContainerPort>4242</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>10113</HostPort>
+                <ContainerPort>10113</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir></HostDir>
+            <ContainerDir>/config</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment>
+        <Variable>
+            <Value>100</Value>
+            <Name>PGID</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value>99</Value>
+            <Name>PUID</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value>--config-from-environment</Value>
+            <Name>-e RUN_OPTS</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>DB_BACKEND</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>DB_PGSQL_USERNAME</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>DB_PGSQL_PASSWORD</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>DB_PGSQL_HOSTNAME</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>DB_PGSQL_PORT</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>AUTH_AUTHENTICATOR</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>AUTH_LDAP_HOSTNAME</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>AUTH_LDAP_PORT</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>AUTH_LDAP_BIND_DN</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>AUTH_LDAP_BIND_PASSWORD</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>AUTH_LDAP_FILTER</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value/>
+            <Name>AUTH_LDAP_UID_ATTRIBUTE</Name>
+            <Mode/>
+        </Variable>
+    </Environment>
+    <Labels/>
+    <Config Name="Host Port 1" Target="4242" Default="4242" Mode="tcp" Description="Container Port: 4242" Type="Port" Display="always" Required="true" Mask="false">4242</Config>
+    <Config Name="Key 1" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+    <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+    <Config Name="Host Port 2" Target="10113" Default="" Mode="tcp" Description="Container Port: 10113" Type="Port" Display="always" Required="false" Mask="false">10113</Config>
+    <Config Name="Stateless" Target="-e RUN_OPTS" Default="" Mode="" Description="Container Variable: -e RUN_OPTS" Type="Variable" Display="always" Required="false" Mask="false">--config-from-environment</Config>
+    <Config Name="DB_BACKEND" Target="DB_BACKEND" Default="" Mode="" Description="SQLite or PostgreSQL" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="DB_PGSQL_USERNAME" Target="DB_PGSQL_USERNAME" Default="" Mode="" Description="PostgreSQL User" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="DB_PGSQL_PASSWORD" Target="DB_PGSQL_PASSWORD" Default="" Mode="" Description="PostgreSQL Password" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="DB_PGSQL_HOSTNAME" Target="DB_PGSQL_HOSTNAME" Default="" Mode="" Description="PostgreSQL Host" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="DB_PGSQL_PORT" Target="DB_PGSQL_PORT" Default="" Mode="" Description="PostgreSQL Port" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="AUTH_AUTHENTICATOR" Target="AUTH_AUTHENTICATOR" Default="" Mode="" Description="Database or LDAP" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="AUTH_LDAP_HOSTNAME" Target="AUTH_LDAP_HOSTNAME" Default="" Mode="" Description="LDAP Host" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="AUTH_LDAP_PORT" Target="AUTH_LDAP_PORT" Default="" Mode="" Description="LDAP Port" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="AUTH_LDAP_BIND_DN" Target="AUTH_LDAP_BIND_DN" Default="" Mode="" Description="LDAP Bind Domain" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="AUTH_LDAP_BIND_PASSWORD" Target="AUTH_LDAP_BIND_PASSWORD" Default="" Mode="" Description="LDAP Password" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="AUTH_LDAP_FILTER" Target="AUTH_LDAP_FILTER" Default="" Mode="" Description="LDAP Authentication Filters" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="AUTH_LDAP_UID_ATTRIBUTE" Target="AUTH_LDAP_UID_ATTRIBUTE" Default="" Mode="" Description="LDAP UID" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="AppData Config Path" Target="/config" Default="" Mode="rw,slave" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+</Container>
