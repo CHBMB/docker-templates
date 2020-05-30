@@ -8,7 +8,7 @@
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/tiredofit/docker-openldap-fusiondirectory</Support>
-  <Project>https://www.fusiondirectory.org/</Project>
+  <Project>https://www.openldap.org/</Project>
   <Overview>OpenLDAP Server with Fusion Directory Schema's Included. It includes all the functions in the OpenLDAP Image such as Multi-Master Replication, TLS, and other features.</Overview>
   <Category>Security: Tools: Network:Management Status:Stable</Category>
   <WebUI/>

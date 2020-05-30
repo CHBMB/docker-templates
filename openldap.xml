@@ -15,7 +15,7 @@ The --copy-service post argument allows your certs to be mounted read only and c
   <Category>Security: Tools: Network:Management Status:Stable</Category>
   <WebUI/>
   <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/openldap.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/openldap.jpg</Icon>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/openldap.png</Icon>
   <ExtraParams/>
   <PostArgs>--copy-service --loglevel info</PostArgs>
   <CPUset/>
