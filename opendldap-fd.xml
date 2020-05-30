@@ -13,22 +13,16 @@
   <Category>Security: Tools: Network:Management Status:Stable</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/openldap.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1590797163</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>OpenLDAP Server with Fusion Directory Schema's Included. It includes all the functions in the OpenLDAP Image such as Multi-Master Replication, TLS, and other features.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
-      <Port>
-        <HostPort/>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
       <Port>
         <HostPort>389</HostPort>
         <ContainerPort>389</ContainerPort>
@@ -514,7 +508,7 @@
   <Config Name="BACKUP_DATA_CRON_PERIOD" Target="BACKUP_DATA_CRON_PERIOD" Default="0 4 * * *" Mode="" Description="Cron expression to schedule OpenLDAP data backup. Defaults 0 4 * * * Every day at 4am." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="BACKUP_TTL" Target="BACKUP_TTL" Default="15" Mode="" Description="Automatically cleanup backup after how many days. Default 15" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="ENABLE_NGINX" Target="ENABLE_NGINX" Default="false" Mode="" Description="If you want to use automatic LetsEncrypt certificates for your server, set this to true" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="LetsEncrypt" Target="80" Default="80" Mode="tcp" Description="Nginx - For Automatic LetsEncrypt Certficates" Type="Port" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="LetsEncrypt" Target="80" Default="" Mode="tcp" Description="Nginx - For Automatic LetsEncrypt Certficates" Type="Port" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="Landing page" Target="/www/html" Default="" Mode="rw" Description="/www/html - If you want to put a landing page if using Nginx for LetsEncrypt SSL Place it here " Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="Fusion Directory Schema Files" Target="/assets/fusiondirectory-custom/" Default="" Mode="rw" Description="Place Schema files here to be imported into FusionDirectory" Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="Custom Scripts" Target="/assets/custom-scripts/" Default="" Mode="rw" Description="/assets/custom-scripts/ - If you'd like to execute a script during the initialization process drop it here" Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
