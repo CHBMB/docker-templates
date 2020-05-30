@@ -1,27 +1,28 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>openldapfd</Name>
+  <Name>openldap-fusiondirectory</Name>
   <Repository>tiredofit/openldap-fusiondirectory</Repository>
-  <Registry/>
-  <Network>docker</Network>
+  <Registry>https://hub.docker.com/r/tiredofit/openldap-fusiondirectory</Registry>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/tiredofit/docker-openldap-fusiondirectory</Support>
   <Project>https://www.fusiondirectory.org/</Project>
-  <Overview> OpenLDAP Server with Fusion Directory Schema's Included. It includes all the functions in the OpenLDAP Image such as Multi-Master Replication, TLS, and other features.</Overview>
-  <Category/>
+  <Overview>OpenLDAP Server with Fusion Directory Schema's Included. It includes all the functions in the OpenLDAP Image such as Multi-Master Replication, TLS, and other features.</Overview>
+  <Category>Security: Tools: Network:Management Status:Stable</Category>
   <WebUI/>
   <TemplateURL/>
   <Icon/>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
+  <DateInstalled>1590797163</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description> OpenLDAP Server with Fusion Directory Schema's Included. It includes all the functions in the OpenLDAP Image such as Multi-Master Replication, TLS, and other features.</Description>
+  <Description>OpenLDAP Server with Fusion Directory Schema's Included. It includes all the functions in the OpenLDAP Image such as Multi-Master Replication, TLS, and other features.</Description>
   <Networking>
-    <Mode>docker</Mode>
+    <Mode>bridge</Mode>
     <Publish>
       <Port>
         <HostPort/>
@@ -79,7 +80,7 @@
   </Data>
   <Environment>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>DOMAIN</Name>
       <Mode/>
     </Variable>
@@ -89,22 +90,22 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>ADMIN_PASS</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>CONFIG_PASS</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>ORGANIZATION</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>>
+      <Value/>
       <Name>ENABLE_READONLY_USER</Name>
       <Mode/>
     </Variable>
@@ -144,8 +145,103 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>password</Value>
+      <Value/>
       <Name>FUSIONDIRECTORY_ADMIN_PASS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>BACKUP_CONFIG_CRON_PERIOD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>BACKUP_DATA_CRON_PERIOD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>BACKUP_TTL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ENABLE_TLS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_CA_CRT_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_CIPHER_SUITE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_CRT_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_DH_PARAM_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_DH_PARAM_KEYSIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_DH_PARAM_PATH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_ENFORCE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_KEY_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_RESET_PERMISSIONS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_VERIFY_CLIENT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ENABLE_NGINX</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>REMOVE_CONFIG_AFTER_SETUP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SLAPD_ARGS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SLAPD_HOSTS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SSL_HELPER_PREFIX</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -389,83 +485,102 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>FALSE</Value>
+      <Value/>
       <Name>REAPPLY_PLUGIN_SCHEMAS</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="LetsEncrypt" Target="80" Default="80" Mode="tcp" Description="Nginx - For Automatic LetsEncrypt Certficates" Type="Port" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Unecrypted LDAP" Target="389" Default="" Mode="tcp" Description="Unecrypted LDAP" Type="Port" Display="always" Required="false" Mask="false">389</Config>
   <Config Name="TLS Encrypted LDAP" Target="636" Default="" Mode="tcp" Description="TLS Encrypted LDAP" Type="Port" Display="always" Required="false" Mask="false">636</Config>
-  <Config Name="Data Directory" Target="/var/lib/openldap" Default="" Mode="rw" Description="/var/lib/openldap - Data Directory" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Configuration Directory" Target="/etc/openldap/slapd.d" Default="" Mode="rw" Description="/etc/openldap/slapd.d - Configuration Directory" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="TLS Certificates" Target="/assets/slapd/certs/ &#9;" Default="" Mode="rw" Description="/assets/slapd/certs/ - Drop TLS Certificates here" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Backup Directory" Target="/data/backup" Default="" Mode="rw" Description="/data/backup - Backup Directory" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Landing page" Target="/www/html" Default="" Mode="rw" Description="/www/html - If you want to put a landing page if using Nginx for LetsEncrypt SSL Place it here " Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="DOMAIN" Target="DOMAIN" Default="example.org" Mode="" Description="LDAP domain" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Data Directory" Target="/var/lib/openldap" Default="" Mode="rw" Description="/var/lib/openldap - Data Directory" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Configuration Directory" Target="/etc/openldap/slapd.d" Default="" Mode="rw" Description="/etc/openldap/slapd.d - Configuration Directory" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Backup Directory" Target="/data/backup" Default="" Mode="rw" Description="/data/backup - Backup Directory" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="DOMAIN" Target="DOMAIN" Default="example.org" Mode="" Description="LDAP domain" Type="Variable" Display="always" Required="false" Mask="false">example.org</Config>
   <Config Name="BASE_DN" Target="BASE_DN" Default="" Mode="" Description="LDAP base DN. If empty automatically set from DOMAIN value." Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="ADMIN_PASS" Target="ADMIN_PASS" Default="admin" Mode="" Description="Ldap Admin password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="CONFIG_PASS" Target="CONFIG_PASS" Default="config" Mode="" Description="Ldap Config password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="ORGANIZATION" Target="ORGANIZATION" Default="Example Organization" Mode="" Description="Organization Name" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="ENABLE_READONLY_USER" Target="ENABLE_READONLY_USER" Default="false" Mode="" Description="Add a read only user" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="READONLY_USER_USER" Target="READONLY_USER_USER" Default="readonly" Mode="" Description="Read only user username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="READONLY_USER_PASS" Target="READONLY_USER_PASS" Default="readonly" Mode="" Description="Read only user password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SCHEMA_TYPE" Target="SCHEMA_TYPE" Default="nis" Mode="" Description="Use nis or rfc2307bis core schema" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="BACKEND" Target="BACKEND" Default="mdb" Mode="" Description="Ldap backend. bdb hdb mdb and others." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="256" Mode="" Description="Set LDAP Log Level" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="ULIMIT_N" Target="ULIMIT_N" Default="1024" Mode="" Description="Set Open File Descriptor Limit" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Fusion Directory Schema Files" Target="/assets/fusiondirectory-custom/" Default="" Mode="rw" Description="Place Schema files here to be imported into FusionDirectory" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="FUSIONDIRECTORY_ADMIN_USER" Target="FUSIONDIRECTORY_ADMIN_USER" Default="fd-admin" Mode="" Description="Default FD Admin User" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="FUSIONDIRECTORY_ADMIN_PASS" Target="FUSIONDIRECTORY_ADMIN_PASS" Default="admin" Mode="" Description="Default FD Admin Password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="PLUGIN_ALIAS" Target="PLUGIN_ALIAS" Default="FALSE" Mode="" Description="Mail Aliases - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_APPLICATIONS" Target="PLUGIN_APPLICATIONS" Default="FALSE" Mode="" Description="Applications - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_ARGONAUT" Target="PLUGIN_ARGONAUT" Default="FALSE" Mode="" Description="Argonaut - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_AUDIT" Target="PLUGIN_AUDIT" Default="TRUE" Mode="" Description="Audit Trail - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_AUTOFS" Target="PLUGIN_AUTOFS" Default="FALSE" Mode="" Description="AutoFS - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_CERTIFICATES" Target="PLUGIN_CERTIFICATES" Default="FALSE" Mode="" Description="Manage Certificates - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_COMMUNITY" Target="PLUGIN_COMMUNITY" Default="FALSE" Mode="" Description="Community Plugin - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_CYRUS" Target="PLUGIN_CYRUS" Default="FALSE" Mode="" Description="Cyrus IMAP - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_DEBCONF" Target="PLUGIN_DEBCONF" Default="FALSE" Mode="" Description="Argonaut Debconf - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_DEVELOPERS" Target="PLUGIN_DEVELOPERS" Default="FALSE" Mode="" Description="Developers Plugin - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_DHCP" Target="PLUGIN_DHCP" Default="FALSE" Mode="" Description="Manage DHCP - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_DNS" Target="PLUGIN_DNS" Default="FALSE" Mode="" Description="Manage DNS - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_DOVECOT" Target="PLUGIN_DOVECOT" Default="FALSE" Mode="" Description="Dovecot IMAP - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_DSA" Target="PLUGIN_DSA" Default="TRUE" Mode="" Description="System Accounts - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_EJBCA" Target="PLUGIN_EJBCA" Default="FALSE" Mode="" Description="Unknown - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_FAI" Target="PLUGIN_FAI" Default="FALSE" Mode="" Description="Unknown - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_FREERADIUS" Target="PLUGIN_FREERADIUS" Default="FALSE" Mode="" Description="FreeRadius Management - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_FUSIONINVENTORY" Target="PLUGIN_FUSIONINVENTORY" Default="FALSE" Mode="" Description="nventory Plugin - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_GPG" Target="PLUGIN_GPG" Default="FALSE" Mode="" Description="Manage GPG Keys - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_IPMI" Target="PLUGIN_IPMI" Default="FALSE" Mode="" Description="IPMI Management - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_MAIL" Target="PLUGIN_MAIL" Default="TRUE" Mode="" Description="Mail Attributes - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_MIXEDGROUPS" Target="PLUGIN_MIXEDGROUPS" Default="FALSE" Mode="" Description="Unix/LDAP Groups - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_NAGIOS" Target="PLUGIN_NAGIOS" Default="FALSE" Mode="" Description="Nagios Monitoring - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_NETGROUPS" Target="PLUGIN_NETGROUPS" Default="FALSE" Mode="" Description="NIS - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_NETGROUPS" Target="PLUGIN_NETGROUPS" Default="FALSE" Mode="" Description="NIS - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_NEWSLETTER" Target="PLUGIN_NEWSLETTER" Default="FALSE" Mode="" Description="Manage Newsletters - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_OPSI" Target="PLUGIN_OPSI" Default="FALSE" Mode="" Description="Inventory - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_PERSONAL" Target="PLUGIN_PERSONAL" Default="TRUE" Mode="" Description="Personal Details - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_POSIX" Target="PLUGIN_POSIX" Default="FALSE" Mode="" Description="Posix Groups - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_POSTFIX" Target="PLUGIN_POSTFIX" Default="FALSE" Mode="" Description="Postfix SMTP - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_PPOLICY" Target="PLUGIN_PPOLICY" Default="TRUE" Mode="" Description="Password Policy - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_PUPPET" Target="PLUGIN_PUPPET" Default="FALSE" Mode="" Description="Puppet CI - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_PUREFTPD" Target="PLUGIN_PUREFTPD" Default="FALSE" Mode="" Description="FTP Server - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_QUOTA" Target="PLUGIN_QUOTA" Default="FALSE" Mode="" Description="Manage Quotas - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_RENATER_PARTAGE" Target="PLUGIN_RENATER_PARTAGE" Default="FALSE" Mode="" Description="Unknown - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_REPOSITORY" Target="PLUGIN_REPOSITORY" Default="FALSE" Mode="" Description="Argonaut Deployment Registry - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_SAMBA" Target="PLUGIN_SAMBA" Default="FALSE" Mode="" Description="File Sharing - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_SOGO" Target="PLUGIN_SOGO" Default="FALSE" Mode="" Description="Groupware - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_SPAMASSASSIN" Target="PLUGIN_SPAMASSASSIN" Default="FALSE" Mode="" Description="Anti Spam - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_SQUID" Target="PLUGIN_SQUID" Default="FALSE" Mode="" Description="Proxy - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_SSH" Target="PLUGIN_SSH" Default="TRUE" Mode="" Description="Manage SSH Keys - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_SUBCONTRACTING" Target="PLUGIN_SUBCONTRACTING" Default="FALSE" Mode="" Description="Unknown - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_SUDO" Target="PLUGIN_SUDO" Default="FALSE" Mode="" Description="Manage SUDO on Hosts - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_SUPANN" Target="PLUGIN_SUPANN" Default="FALSE" Mode="" Description="SUPANN - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_SYMPA" Target="PLUGIN_SYMPA" Default="FALSE" Mode="" Description="Sympa Mailing List - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_SYSTEMS" Target="PLUGIN_SYSTEMS" Default="TRUE" Mode="" Description="Systems Management - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_USER_REMINDER" Target="PLUGIN_USER_REMINDER" Default="FALSE" Mode="" Description="Password Expiry - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PLUGIN_WEBLINK" Target="PLUGIN_WEBLINK" Default="FALSE" Mode="" Description="Display Weblink - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="REAPPLY_PLUGIN_SCHEMAS" Target="REAPPLY_PLUGIN_SCHEMAS" Default="FALSE" Mode="" Description="Reapply Plugin Schemas TRUE or FALSE - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="ADMIN_PASS" Target="ADMIN_PASS" Default="admin" Mode="" Description="Ldap Admin password" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="CONFIG_PASS" Target="CONFIG_PASS" Default="config" Mode="" Description="Ldap Config password" Type="Variable" Display="always" Required="false" Mask="false">config</Config>
+  <Config Name="ORGANIZATION" Target="ORGANIZATION" Default="Example Organization" Mode="" Description="Organization Name" Type="Variable" Display="always" Required="false" Mask="false">Example Organization</Config>
+  <Config Name="ENABLE_READONLY_USER" Target="ENABLE_READONLY_USER" Default="false" Mode="" Description="Add a read only user" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="READONLY_USER_USER" Target="READONLY_USER_USER" Default="readonly" Mode="" Description="Read only user username" Type="Variable" Display="always" Required="false" Mask="false">readonly</Config>
+  <Config Name="READONLY_USER_PASS" Target="READONLY_USER_PASS" Default="readonly" Mode="" Description="Read only user password" Type="Variable" Display="always" Required="false" Mask="false">readonly</Config>
+  <Config Name="SCHEMA_TYPE" Target="SCHEMA_TYPE" Default="nis" Mode="" Description="Use nis or rfc2307bis core schema" Type="Variable" Display="always" Required="false" Mask="false">nis</Config>
+  <Config Name="BACKEND" Target="BACKEND" Default="mdb" Mode="" Description="Ldap backend. bdb hdb mdb and others." Type="Variable" Display="always" Required="false" Mask="false">mdb</Config>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="256" Mode="" Description="Set LDAP Log Level" Type="Variable" Display="always" Required="false" Mask="false">256</Config>
+  <Config Name="ULIMIT_N" Target="ULIMIT_N" Default="1024" Mode="" Description="Set Open File Descriptor Limit" Type="Variable" Display="always" Required="false" Mask="false">1024</Config>
+  <Config Name="FUSIONDIRECTORY_ADMIN_USER" Target="FUSIONDIRECTORY_ADMIN_USER" Default="fd-admin" Mode="" Description="Default FD Admin User" Type="Variable" Display="always" Required="false" Mask="false">fd-admin</Config>
+  <Config Name="FUSIONDIRECTORY_ADMIN_PASS" Target="FUSIONDIRECTORY_ADMIN_PASS" Default="admin" Mode="" Description="Default FD Admin Password" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="BACKUP_CONFIG_CRON_PERIOD" Target="BACKUP_CONFIG_CRON_PERIOD" Default="0 4 * * *" Mode="" Description="Cron expression to schedule OpenLDAP config backup. Defaults 0 4 * * * Every day at 4am." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="BACKUP_DATA_CRON_PERIOD" Target="BACKUP_DATA_CRON_PERIOD" Default="0 4 * * *" Mode="" Description="Cron expression to schedule OpenLDAP data backup. Defaults 0 4 * * * Every day at 4am." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="BACKUP_TTL" Target="BACKUP_TTL" Default="15" Mode="" Description="Automatically cleanup backup after how many days. Default 15" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="ENABLE_NGINX" Target="ENABLE_NGINX" Default="false" Mode="" Description="If you want to use automatic LetsEncrypt certificates for your server, set this to true" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="LetsEncrypt" Target="80" Default="80" Mode="tcp" Description="Nginx - For Automatic LetsEncrypt Certficates" Type="Port" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Landing page" Target="/www/html" Default="" Mode="rw" Description="/www/html - If you want to put a landing page if using Nginx for LetsEncrypt SSL Place it here " Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Fusion Directory Schema Files" Target="/assets/fusiondirectory-custom/" Default="" Mode="rw" Description="Place Schema files here to be imported into FusionDirectory" Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="Custom Scripts" Target="/assets/custom-scripts/" Default="" Mode="rw" Description="/assets/custom-scripts/ - If you'd like to execute a script during the initialization process drop it here" Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="ENABLE_TLS" Target="ENABLE_TLS" Default="true" Mode="" Description="Add TLS capabilities. Can't be removed once set to true. Defaults true" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS Certificates" Target="/assets/slapd/certs/ &#9;" Default="" Mode="rw" Description="/assets/slapd/certs/ - Drop TLS Certificates here" Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_CA_CRT_FILENAME" Target="TLS_CA_CRT_FILENAME" Default="ca.pem" Mode="" Description="TLS CA certificate filename. Default ca.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_CIPHER_SUITE" Target="TLS_CIPHER_SUITE" Default="ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:-DHE-DSS:-RSA:!aNULL:!MD5:!DSS:!SHA" Mode="" Description="TLS cipher suite. Default ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:-DHE-DSS:-RSA:!aNULL:!MD5:!DSS:!SHA" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_CRT_FILENAME" Target="TLS_CRT_FILENAME" Default="cert.pem" Mode="" Description="TLS certificate filename. Default cert.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_DH_PARAM_FILENAME" Target="TLS_DH_PARAM_FILENAME" Default="dhparam.pem" Mode="" Description="TLS DHParam Filename. Default dhparam.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_DH_PARAM_KEYSIZE" Target="TLS_DH_PARAM_KEYSIZE" Default="2048" Mode="" Description="TLS DHParam Keysize. Default 2048" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_DH_PARAM_PATH" Target="TLS_DH_PARAM_PATH" Default="/assets/slapd/certs" Mode="" Description="TLS DHParam path. Default /assets/slapd/certs" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_ENFORCE" Target="TLS_ENFORCE" Default="false" Mode="" Description="Enforce TLS. Can't be disabled once set to true. Defaults false" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_KEY_FILENAME" Target="TLS_KEY_FILENAME" Default="key.pem" Mode="" Description="TLS certificate private key filename. Default key.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_RESET_PERMISSIONS" Target="TLS_RESET_PERMISSIONS" Default="TRUE" Mode="" Description="Change ownership and reset permissions on Certificates on startup. Default TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_VERIFY_CLIENT" Target="TLS_VERIFY_CLIENT" Default="try" Mode="" Description="TLS verify client. Default try" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="REMOVE_CONFIG_AFTER_SETUP" Target="REMOVE_CONFIG_AFTER_SETUP" Default="true" Mode="" Description="Delete config folder after setup. Default true" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="SLAPD_ARGS" Target="SLAPD_ARGS" Default="" Mode="" Description="If you want to override slapd runtime arguments place here . Default (null)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="SLAPD_HOSTS" Target="SLAPD_HOSTS" Default="ldap://$HOSTNAME ldaps://$HOSTNAME ldapi:///" Mode="" Description="Allow overriding the default listen parameters - Default ldap://$HOSTNAME ldaps://$HOSTNAME ldapi:///" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="SSL_HELPER_PREFIX" Target="SSL_HELPER_PREFIX" Default="ldap" Mode="" Description="Ssl-helper environment variables prefix. Default ldap, ssl-helper first search config from SSL_HELPER_* variables, before SSL_HELPER_* variables." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="PLUGIN_ALIAS" Target="PLUGIN_ALIAS" Default="FALSE" Mode="" Description="Mail Aliases - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_APPLICATIONS" Target="PLUGIN_APPLICATIONS" Default="FALSE" Mode="" Description="Applications - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_ARGONAUT" Target="PLUGIN_ARGONAUT" Default="FALSE" Mode="" Description="Argonaut - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_AUDIT" Target="PLUGIN_AUDIT" Default="TRUE" Mode="" Description="Audit Trail - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">TRUE</Config>
+  <Config Name="PLUGIN_AUTOFS" Target="PLUGIN_AUTOFS" Default="FALSE" Mode="" Description="AutoFS - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_CERTIFICATES" Target="PLUGIN_CERTIFICATES" Default="FALSE" Mode="" Description="Manage Certificates - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_COMMUNITY" Target="PLUGIN_COMMUNITY" Default="FALSE" Mode="" Description="Community Plugin - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_CYRUS" Target="PLUGIN_CYRUS" Default="FALSE" Mode="" Description="Cyrus IMAP - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_DEBCONF" Target="PLUGIN_DEBCONF" Default="FALSE" Mode="" Description="Argonaut Debconf - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_DEVELOPERS" Target="PLUGIN_DEVELOPERS" Default="FALSE" Mode="" Description="Developers Plugin - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_DHCP" Target="PLUGIN_DHCP" Default="FALSE" Mode="" Description="Manage DHCP - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_DNS" Target="PLUGIN_DNS" Default="FALSE" Mode="" Description="Manage DNS - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_DOVECOT" Target="PLUGIN_DOVECOT" Default="FALSE" Mode="" Description="Dovecot IMAP - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_DSA" Target="PLUGIN_DSA" Default="TRUE" Mode="" Description="System Accounts - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">TRUE</Config>
+  <Config Name="PLUGIN_EJBCA" Target="PLUGIN_EJBCA" Default="FALSE" Mode="" Description="Unknown - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_FAI" Target="PLUGIN_FAI" Default="FALSE" Mode="" Description="Unknown - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_FREERADIUS" Target="PLUGIN_FREERADIUS" Default="FALSE" Mode="" Description="FreeRadius Management - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_FUSIONINVENTORY" Target="PLUGIN_FUSIONINVENTORY" Default="FALSE" Mode="" Description="nventory Plugin - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_GPG" Target="PLUGIN_GPG" Default="FALSE" Mode="" Description="Manage GPG Keys - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_IPMI" Target="PLUGIN_IPMI" Default="FALSE" Mode="" Description="IPMI Management - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_MAIL" Target="PLUGIN_MAIL" Default="TRUE" Mode="" Description="Mail Attributes - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">TRUE</Config>
+  <Config Name="PLUGIN_MIXEDGROUPS" Target="PLUGIN_MIXEDGROUPS" Default="FALSE" Mode="" Description="Unix/LDAP Groups - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_NAGIOS" Target="PLUGIN_NAGIOS" Default="FALSE" Mode="" Description="Nagios Monitoring - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_NETGROUPS" Target="PLUGIN_NETGROUPS" Default="FALSE" Mode="" Description="NIS - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_NETGROUPS" Target="PLUGIN_NETGROUPS" Default="FALSE" Mode="" Description="NIS - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_NEWSLETTER" Target="PLUGIN_NEWSLETTER" Default="FALSE" Mode="" Description="Manage Newsletters - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_OPSI" Target="PLUGIN_OPSI" Default="FALSE" Mode="" Description="Inventory - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_PERSONAL" Target="PLUGIN_PERSONAL" Default="TRUE" Mode="" Description="Personal Details - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">TRUE</Config>
+  <Config Name="PLUGIN_POSIX" Target="PLUGIN_POSIX" Default="FALSE" Mode="" Description="Posix Groups - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_POSTFIX" Target="PLUGIN_POSTFIX" Default="FALSE" Mode="" Description="Postfix SMTP - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_PPOLICY" Target="PLUGIN_PPOLICY" Default="TRUE" Mode="" Description="Password Policy - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">TRUE</Config>
+  <Config Name="PLUGIN_PUPPET" Target="PLUGIN_PUPPET" Default="FALSE" Mode="" Description="Puppet CI - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_PUREFTPD" Target="PLUGIN_PUREFTPD" Default="FALSE" Mode="" Description="FTP Server - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_QUOTA" Target="PLUGIN_QUOTA" Default="FALSE" Mode="" Description="Manage Quotas - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_RENATER_PARTAGE" Target="PLUGIN_RENATER_PARTAGE" Default="FALSE" Mode="" Description="Unknown - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_REPOSITORY" Target="PLUGIN_REPOSITORY" Default="FALSE" Mode="" Description="Argonaut Deployment Registry - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_SAMBA" Target="PLUGIN_SAMBA" Default="FALSE" Mode="" Description="File Sharing - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_SOGO" Target="PLUGIN_SOGO" Default="FALSE" Mode="" Description="Groupware - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_SPAMASSASSIN" Target="PLUGIN_SPAMASSASSIN" Default="FALSE" Mode="" Description="Anti Spam - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_SQUID" Target="PLUGIN_SQUID" Default="FALSE" Mode="" Description="Proxy - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_SSH" Target="PLUGIN_SSH" Default="TRUE" Mode="" Description="Manage SSH Keys - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">TRUE</Config>
+  <Config Name="PLUGIN_SUBCONTRACTING" Target="PLUGIN_SUBCONTRACTING" Default="FALSE" Mode="" Description="Unknown - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_SUDO" Target="PLUGIN_SUDO" Default="FALSE" Mode="" Description="Manage SUDO on Hosts - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_SUPANN" Target="PLUGIN_SUPANN" Default="FALSE" Mode="" Description="SUPANN - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_SYMPA" Target="PLUGIN_SYMPA" Default="FALSE" Mode="" Description="Sympa Mailing List - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_SYSTEMS" Target="PLUGIN_SYSTEMS" Default="TRUE" Mode="" Description="Systems Management - Default: TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">TRUE</Config>
+  <Config Name="PLUGIN_USER_REMINDER" Target="PLUGIN_USER_REMINDER" Default="FALSE" Mode="" Description="Password Expiry - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="PLUGIN_WEBLINK" Target="PLUGIN_WEBLINK" Default="FALSE" Mode="" Description="Display Weblink - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
+  <Config Name="REAPPLY_PLUGIN_SCHEMAS" Target="REAPPLY_PLUGIN_SCHEMAS" Default="FALSE" Mode="" Description="Reapply Plugin Schemas TRUE or FALSE - Default: FALSE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">FALSE</Config>
 </Container>
