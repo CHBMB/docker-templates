@@ -495,8 +495,8 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Unecrypted LDAP" Target="389" Default="" Mode="tcp" Description="Unecrypted LDAP" Type="Port" Display="always" Required="false" Mask="false">389</Config>
-  <Config Name="TLS Encrypted LDAP" Target="636" Default="" Mode="tcp" Description="TLS Encrypted LDAP" Type="Port" Display="always" Required="false" Mask="false">636</Config>
+  <Config Name="Unecrypted LDAP" Target="389" Default="389" Mode="tcp" Description="Unecrypted LDAP" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="TLS Encrypted LDAP" Target="636" Default="636" Mode="tcp" Description="TLS Encrypted LDAP" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="Data Directory" Target="/var/lib/openldap" Default="" Mode="rw" Description="/var/lib/openldap - Data Directory" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Configuration Directory" Target="/etc/openldap/slapd.d" Default="" Mode="rw" Description="/etc/openldap/slapd.d - Configuration Directory" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Backup Directory" Target="/data/backup" Default="" Mode="rw" Description="/data/backup - Backup Directory" Type="Path" Display="always" Required="false" Mask="false"/>
