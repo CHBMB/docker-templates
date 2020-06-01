@@ -160,7 +160,7 @@
     </Variable>
     <Variable>
       <Value/>
-      <Name>ENABLE_TLS</Name>
+      <Name>TLS_CA_CRT_PATH</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -170,12 +170,27 @@
     </Variable>
     <Variable>
       <Value/>
-      <Name>TLS_CIPHER_SUITE</Name>
+      <Name>TLS_CRT_PATH</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
       <Name>TLS_CRT_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_KEY_PATH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_KEY_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_DH_PARAM_PATH</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -190,22 +205,17 @@
     </Variable>
     <Variable>
       <Value/>
-      <Name>TLS_DH_PARAM_PATH</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
       <Name>TLS_ENFORCE</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>TLS_KEY_FILENAME</Name>
+      <Name>TLS_RESET_PERMISSIONS</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>TLS_RESET_PERMISSIONS</Name>
+      <Name>TLS_CIPHER_SUITE</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -512,17 +522,18 @@
   <Config Name="Landing page" Target="/www/html" Default="" Mode="rw" Description="/www/html - If you want to put a landing page if using Nginx for LetsEncrypt SSL Place it here " Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="Fusion Directory Schema Files" Target="/assets/fusiondirectory-custom/" Default="" Mode="rw" Description="Place Schema files here to be imported into FusionDirectory" Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="Custom Scripts" Target="/assets/custom-scripts/" Default="" Mode="rw" Description="/assets/custom-scripts/ - If you'd like to execute a script during the initialization process drop it here" Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="ENABLE_TLS" Target="ENABLE_TLS" Default="true" Mode="" Description="Add TLS capabilities. Can't be removed once set to true. Defaults true" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="TLS Certificates" Target="/assets/slapd/certs/ &#9;" Default="" Mode="rw" Description="/assets/slapd/certs/ - Drop TLS Certificates here" Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_CA_CRT_PATH" Target="TLS_CA_CRT_PATH" Default="/assets/slapd/certs" Mode="" Description="TLS CA certificate path. Default /assets/slapd/certs" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="TLS_CA_CRT_FILENAME" Target="TLS_CA_CRT_FILENAME" Default="ca.pem" Mode="" Description="TLS CA certificate filename. Default ca.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="TLS_CIPHER_SUITE" Target="TLS_CIPHER_SUITE" Default="ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:-DHE-DSS:-RSA:!aNULL:!MD5:!DSS:!SHA" Mode="" Description="TLS cipher suite. Default ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:-DHE-DSS:-RSA:!aNULL:!MD5:!DSS:!SHA" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_CRT_PATH" Target="TLS_CRT_PATH" Default="/assets/slapd/certs" Mode="" Description="TLS certificate path. Default /assets/slapd/certs" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="TLS_CRT_FILENAME" Target="TLS_CRT_FILENAME" Default="cert.pem" Mode="" Description="TLS certificate filename. Default cert.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_KEY_PATH" Target="TLS_KEY_PATH" Default="/assets/slapd/certs" Mode="" Description="TLS certificate private key path. Default /assets/slapd/certs" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_KEY_FILENAME" Target="TLS_KEY_FILENAME" Default="key.pem" Mode="" Description="TLS certificate private key filename. Default key.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_DH_PARAM_PATH" Target="TLS_DH_PARAM_PATH" Default="/assets/slapd/certs" Mode="" Description="TLS DHParam path. Default /assets/slapd/certs" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="TLS_DH_PARAM_FILENAME" Target="TLS_DH_PARAM_FILENAME" Default="dhparam.pem" Mode="" Description="TLS DHParam Filename. Default dhparam.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="TLS_DH_PARAM_KEYSIZE" Target="TLS_DH_PARAM_KEYSIZE" Default="2048" Mode="" Description="TLS DHParam Keysize. Default 2048" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="TLS_DH_PARAM_PATH" Target="TLS_DH_PARAM_PATH" Default="/assets/slapd/certs" Mode="" Description="TLS DHParam path. Default /assets/slapd/certs" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="TLS_ENFORCE" Target="TLS_ENFORCE" Default="false" Mode="" Description="Enforce TLS. Can't be disabled once set to true. Defaults false" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="TLS_KEY_FILENAME" Target="TLS_KEY_FILENAME" Default="key.pem" Mode="" Description="TLS certificate private key filename. Default key.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="TLS_RESET_PERMISSIONS" Target="TLS_RESET_PERMISSIONS" Default="TRUE" Mode="" Description="Change ownership and reset permissions on Certificates on startup. Default TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_CIPHER_SUITE" Target="TLS_CIPHER_SUITE" Default="ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:-DHE-DSS:-RSA:!aNULL:!MD5:!DSS:!SHA" Mode="" Description="TLS cipher suite. Default ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:-DHE-DSS:-RSA:!aNULL:!MD5:!DSS:!SHA" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="TLS_VERIFY_CLIENT" Target="TLS_VERIFY_CLIENT" Default="try" Mode="" Description="TLS verify client. Default try" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="REMOVE_CONFIG_AFTER_SETUP" Target="REMOVE_CONFIG_AFTER_SETUP" Default="true" Mode="" Description="Delete config folder after setup. Default true" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="SLAPD_ARGS" Target="SLAPD_ARGS" Default="" Mode="" Description="If you want to override slapd runtime arguments place here . Default (null)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
