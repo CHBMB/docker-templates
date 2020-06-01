@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>openldap-tiredofit</Name>
+  <Repository>tiredofit/openldap</Repository>
+  <Registry>https://hub.docker.com/r/tiredofit/openldap</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/tiredofit/docker-openldap</Support>
+  <Project>https://www.openldap.org/</Project>
+  <Overview>a OpenLDAP server for maintaining a directory. Upon starting this image it will give you a ready to run server with many configurable options.&#xD;
+&#xD;
+    Tracks latest release&#xD;
+&#xD;
+    Compiles from source&#xD;
+&#xD;
+    Multiple backends (bdb, hdb, mdb, sql)&#xD;
+&#xD;
+    All overlays compiled&#xD;
+&#xD;
+    Supports TLS encryption&#xD;
+&#xD;
+    Supports Replication&#xD;
+&#xD;
+    Optional Web Server included to take advantage of Let's Encrypt certificates&#xD;
+&#xD;
+    Scheduled Backups of Data&#xD;
+&#xD;
+    Ability to choose NIS or rfc2307bis Schema&#xD;
+&#xD;
+    Two Password Checking Modules - check_password.so and ppm.so&#xD;
+&#xD;
+    Zabbix Monitoring templates included&#xD;
+&#xD;
+    This Container uses a customized Alpine Linux base which includes s6 overlay enabled for PID 1 Init capabilities, zabbix-agent for individual container monitoring, Cron also installed along with other tools (bash,curl, less, logrotate, mariadb-client, nano, vim) for easier management. It also supports sending to external SMTP servers..&#xD;
+</Overview>
+  <Category>Security: Tools: Network:Management Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/openldap.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1591037338</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>a OpenLDAP server for maintaining a directory. Upon starting this image it will give you a ready to run server with many configurable options.&#xD;
+&#xD;
+    Tracks latest release&#xD;
+&#xD;
+    Compiles from source&#xD;
+&#xD;
+    Multiple backends (bdb, hdb, mdb, sql)&#xD;
+&#xD;
+    All overlays compiled&#xD;
+&#xD;
+    Supports TLS encryption&#xD;
+&#xD;
+    Supports Replication&#xD;
+&#xD;
+    Optional Web Server included to take advantage of Let's Encrypt certificates&#xD;
+&#xD;
+    Scheduled Backups of Data&#xD;
+&#xD;
+    Ability to choose NIS or rfc2307bis Schema&#xD;
+&#xD;
+    Two Password Checking Modules - check_password.so and ppm.so&#xD;
+&#xD;
+    Zabbix Monitoring templates included&#xD;
+&#xD;
+    This Container uses a customized Alpine Linux base which includes s6 overlay enabled for PID 1 Init capabilities, zabbix-agent for individual container monitoring, Cron also installed along with other tools (bash,curl, less, logrotate, mariadb-client, nano, vim) for easier management. It also supports sending to external SMTP servers..&#xD;
+</Description>
+  <Networking>
+    <Mode>docker</Mode>
+    <Publish>
+      <Port>
+        <HostPort/>
+        <ContainerPort>389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort/>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/var/lib/openldap</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/etc/openldap/slapd.d</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/data/backup</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/www/html</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/assets/custom-scripts/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>DOMAIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>BASE_DN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ADMIN_PASS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CONFIG_PASS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ORGANIZATION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ENABLE_READONLY_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>READONLY_USER_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>READONLY_USER_PASS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SCHEMA_TYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>BACKEND</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LOG_LEVEL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ULIMIT_N</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_CA_CRT_PATH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_CA_CRT_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_CRT_PATH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_CRT_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_KEY_PATH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_KEY_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_DH_PARAM_PATH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_DH_PARAM_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_DH_PARAM_KEYSIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_ENFORCE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_RESET_PERMISSIONS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_CIPHER_SUITE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TLS_VERIFY_CLIENT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>BACKUP_CONFIG_CRON_PERIOD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>BACKUP_DATA_CRON_PERIOD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>BACKUP_TTL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ENABLE_NGINX</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ENABLE_TLS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Unecrypted LDAP" Target="389" Default="" Mode="tcp" Description="Unecrypted LDAP" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Data Directory" Target="/var/lib/openldap" Default="" Mode="rw" Description="/var/lib/openldap - Data Directory" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Configuration Directory" Target="/etc/openldap/slapd.d" Default="" Mode="rw" Description="/etc/openldap/slapd.d - Configuration Directory" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Backup Directory" Target="/data/backup" Default="" Mode="rw" Description="/data/backup - Backup Directory" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="DOMAIN" Target="DOMAIN" Default="example.org" Mode="" Description="LDAP domain" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="BASE_DN" Target="BASE_DN" Default="" Mode="" Description="LDAP base DN. If empty automatically set from DOMAIN value." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ADMIN_PASS" Target="ADMIN_PASS" Default="admin" Mode="" Description="Ldap Admin password" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="CONFIG_PASS" Target="CONFIG_PASS" Default="config" Mode="" Description="Ldap Config password" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ORGANIZATION" Target="ORGANIZATION" Default="Example Organization" Mode="" Description="Organization Name" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ENABLE_READONLY_USER" Target="ENABLE_READONLY_USER" Default="false" Mode="" Description="Add a read only user&#13;&#10;Default: false" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="READONLY_USER_USER" Target="READONLY_USER_USER" Default="readonly" Mode="" Description="Read only user username Default: readonly" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="READONLY_USER_PASS" Target="READONLY_USER_PASS" Default="readonly" Mode="" Description="Read only user password Default: readonly" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SCHEMA_TYPE" Target="SCHEMA_TYPE" Default="nis" Mode="" Description="Use nis or rfc2307bis core schema Default: nis" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="BACKEND" Target="BACKEND" Default="mdb" Mode="" Description="Ldap backend. bdb hdb mdb and others. Default: mdb" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="256" Mode="" Description="Set LDAP Log Level Default: 256" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ULIMIT_N" Target="ULIMIT_N" Default="1024" Mode="" Description="Set Open File Descriptor Limit Default: 1024" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ENABLE_TLS" Target="ENABLE_TLS" Default="true" Mode="" Description="Add TLS capabilities. Can't be removed once set to true. Default: true" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_CA_CRT_PATH" Target="TLS_CA_CRT_PATH" Default="/assets/slapd/certs" Mode="" Description="TLS CA certificate path. Default /assets/slapd/certs" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_CA_CRT_FILENAME" Target="TLS_CA_CRT_FILENAME" Default="ca.pem" Mode="" Description="TLS CA certificate filename. Default ca.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_CRT_PATH" Target="TLS_CRT_PATH" Default="/assets/slapd/certs" Mode="" Description="TLS certificate path. Default /assets/slapd/certs" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_CRT_FILENAME" Target="TLS_CRT_FILENAME" Default="cert.pem" Mode="" Description="TLS certificate filename. Default cert.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_KEY_PATH" Target="TLS_KEY_PATH" Default="/assets/slapd/certs" Mode="" Description="TLS certificate private key path. Default /assets/slapd/certs" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_KEY_FILENAME" Target="TLS_KEY_FILENAME" Default="key.pem" Mode="" Description="TLS certificate private key filename. Default key.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_DH_PARAM_PATH" Target="TLS_DH_PARAM_PATH" Default="/assets/slapd/certs" Mode="" Description="TLS DHParam path. Default /assets/slapd/certs" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_DH_PARAM_FILENAME" Target="TLS_DH_PARAM_FILENAME" Default="dhparam.pem" Mode="" Description="TLS DHParam Filename. Default dhparam.pem" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_DH_PARAM_KEYSIZE" Target="TLS_DH_PARAM_KEYSIZE" Default="2048" Mode="" Description="TLS DHParam Keysize. Default 2048" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_ENFORCE" Target="TLS_ENFORCE" Default="false" Mode="" Description="Enforce TLS. Can't be disabled once set to true. Defaults false" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_RESET_PERMISSIONS" Target="TLS_RESET_PERMISSIONS" Default="TRUE" Mode="" Description="Change ownership and reset permissions on Certificates on startup. Default TRUE" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_CIPHER_SUITE" Target="TLS_CIPHER_SUITE" Default="ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:-DHE-DSS:-RSA:!aNULL:!MD5:!DSS:!SHA" Mode="" Description="TLS cipher suite. Default ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:-DHE-DSS:-RSA:!aNULL:!MD5:!DSS:!SHA" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="TLS_VERIFY_CLIENT" Target="TLS_VERIFY_CLIENT" Default="try" Mode="" Description="TLS verify client. Default try" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="BACKUP_CONFIG_CRON_PERIOD" Target="BACKUP_CONFIG_CRON_PERIOD" Default="0 4 * * *" Mode="" Description="Cron expression to schedule OpenLDAP config backup. Defaults 0 4 * * * Every day at 4am." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="BACKUP_DATA_CRON_PERIOD" Target="BACKUP_DATA_CRON_PERIOD" Default="0 4 * * *" Mode="" Description="Cron expression to schedule OpenLDAP data backup. Defaults 0 4 * * * Every day at 4am." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="BACKUP_TTL" Target="BACKUP_TTL" Default="15" Mode="" Description="Automatically cleanup backup after how many days. Default 15" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="ENABLE_NGINX" Target="ENABLE_NGINX" Default="false" Mode="" Description="If you want to use automatic LetsEncrypt certificates for your server, set this to true Default: false" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="LetsEncrypt" Target="80" Default="" Mode="tcp" Description="Nginx - For Automatic LetsEncrypt Certficates" Type="Port" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Landing page" Target="/www/html" Default="" Mode="rw" Description="/www/html - If you want to put a landing page if using Nginx for LetsEncrypt SSL Place it here " Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Custom Scripts" Target="/assets/custom-scripts/" Default="" Mode="rw" Description="/assets/custom-scripts/ - If you'd like to execute a script during the initialization process drop it here" Type="Path" Display="advanced-hide" Required="false" Mask="false"/>
+</Container>
