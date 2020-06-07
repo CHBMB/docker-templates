@@ -1,44 +1,43 @@
-<?xml version="1.0"?>
 <Container version="2">
   <Name>authelia</Name>
   <Repository>authelia/authelia</Repository>
   <Registry>https://hub.docker.com/r/authelia/authelia/</Registry>
-  <Network>docker</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/authelia/authelia/</Support>
-  <Project/>
-  <Overview>2-factor authentication server using LDAP as 1st factor and TOTP or U2F as 2nd factor   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
-  <Category/>
+  <Support>https://docs.authelia.com/</Support>
+  <Project>https://github.com/authelia/authelia</Project>
+  <Overview>Authelia is an open-source authentication and authorization server providing 2-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion of reverse proxies like nginx, Traefik or HAProxy to let them know whether queries should pass through. Unauthenticated user are redirected to Authelia Sign-in portal instead.</Overview>
+  <Category>Security: Network:Web Status:Stable</Category>
   <WebUI/>
   <TemplateURL>https://github.com/CHBMB/docker-templates/blob/master/authelia.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/authelia.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DonateText/>
-  <DonateLink/>
-  <Description>2-factor authentication server using LDAP as 1st factor and TOTP or U2F as 2nd factor   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <DonateText>Become an Authelia backer.</DonateText>
+  <DonateLink>https://github.com/authelia/authelia#backers</DonateLink>
+  <Description>Authelia is an open-source authentication and authorization server providing 2-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion of reverse proxies like nginx, Traefik or HAProxy to let them know whether queries should pass through. Unauthenticated user are redirected to Authelia Sign-in portal instead.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort></HostPort>
-        <ContainerPort>8080</ContainerPort>
+        <HostPort>9091</HostPort>
+        <ContainerPort>9091</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/etc/authelia/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="Host Port 1" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Host Path 1" Target="/etc/authelia/" Default="" Mode="rw" Description="Container Path: /etc/authelia/" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Authelia port" Target="9091" Default="" Mode="tcp" Description="Authelia port: 9091" Type="Port" Display="always" Required="true" Mask="false">9091</Config>
+  <Config Name="Appdata" Target="/etc/authelia/" Default="" Mode="rw" Description="Put your configuration.yml in here and set your sqlite3 database path in configuration.yml to /etc/authelia/db.sqlite3" Type="Path" Display="always" Required="false" Mask="false"/>
 </Container>
