@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>mosquitto</Name>
+  <Repository>eclipse-mosquitto</Repository>
+  <Registry>https://hub.docker.com/_/eclipse-mosquitto</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://mosquitto.org/</Project>
+  <Overview>Eclipse Mosquitto is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 5.0, 3.1.1 and 3.1. Mosquitto is lightweight and is suitable for use on all devices from low power single board computers to full servers.&#xD;
+&#xD;
+The MQTT protocol provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for Internet of Things messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers.&#xD;
+&#xD;
+You will need to place a copy of `mosquitto.conf` in your config folder in a subfolder called `config`&#xD;
+&#xD;
+Config file is [here](https://github.com/eclipse/mosquitto/blob/master/mosquitto.conf)</Overview>
+  <Category>HomeAutomation: Network:Messenger Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/mosquitto.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Eclipse Mosquitto is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 5.0, 3.1.1 and 3.1. Mosquitto is lightweight and is suitable for use on all devices from low power single board computers to full servers.&#xD;
+&#xD;
+The MQTT protocol provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for Internet of Things messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers.&#xD;
+&#xD;
+You will need to place a copy of `mosquitto.conf` in your config folder in a subfolder called `config`&#xD;
+&#xD;
+Config file is [here](https://github.com/eclipse/mosquitto/blob/master/mosquitto.conf)</Description>
+  <Networking>
+    <Mode>docker</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1883</HostPort>
+        <ContainerPort>1883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9001</HostPort>
+        <ContainerPort>9001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/mosquitto</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 1" Target="1883" Default="" Mode="tcp" Description="MQTT Port (1883)" Type="Port" Display="always" Required="false" Mask="false">1883</Config>
+  <Config Name="Host Port 2" Target="9001" Default="" Mode="tcp" Description="Webscokets Port (9001)" Type="Port" Display="always" Required="false" Mask="false">9001</Config>
+  <Config Name="Config" Target="/mosquitto" Default="" Mode="rw" Description="Location of config files and folders" Type="Path" Display="always" Required="false" Mask="false"></Config>
+</Container>

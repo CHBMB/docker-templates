@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>homeassistant</Name>
+  <Repository>homeassistant/home-assistant</Repository>
+  <Registry>https://hub.docker.com/r/homeassistant/home-assistant/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://www.home-assistant.io/</Project>
+  <Overview>Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts.</Overview>
+  <Category>HomeAutomation: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8123]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/homeassistant.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="location of config files" Type="Path" Display="always" Required="false" Mask="false"></Config>
+</Container>
