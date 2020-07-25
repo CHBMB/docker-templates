@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>apcupsd</Name>
+  <Repository>atribe/apcupsd-influxdb-exporter</Repository>
+  <Registry>https://cloud.docker.com/repository/docker/atribe/apcupsd-influxdb-exporter</Registry>
+  <Network>docker</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/atribe/apcupsd-influxdb-exporter</Project>
+  <Overview/>
+  <Category>Tools:</Category>
+  <WebUI/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/apcupsd.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>HOSTNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>WATTS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>INFLUXDB_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>APCUPSD_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>INFLUXDB_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>INFLUXDB_DATABASE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>INFLUXDB_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>INFLUXDB_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>VERBOSE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="HOSTNAME" Target="HOSTNAME" Default="unraid" Mode="" Description="host you want the measurements to show up as in influxdb" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="WATTS" Target="WATTS" Default="" Mode="" Description="If your UPS doesn't have the NOMPOWER metric then specify the rated watts so that the load percentage can be used to calculate the current watts" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="INFLUXDB_HOST" Target="INFLUXDB_HOST" Default="localhost" Mode="" Description="ip address of influxdb" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="APCUPSD_HOST" Target="APCUPSD_HOST" Default="localhost" Mode="" Description="address of host running apcupsd" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="INFLUXDB_PORT" Target="INFLUXDB_PORT" Default="8086" Mode="" Description="Container Variable: INFLUXDB_PORT" Type="Variable" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="INFLUXDB_DATABASE" Target="INFLUXDB_DATABASE" Default="apcupsd" Mode="" Description="influxdb database name to store values" Type="Variable" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="INFLUXDB_USER" Target="INFLUXDB_USER" Default="" Mode="" Description="User name for Influxdb" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="INFLUXDB_PASSWORD" Target="INFLUXDB_PASSWORD" Default="" Mode="" Description="Password for Influxdb" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Debugging Output" Target="VERBOSE" Default="false" Mode="" Description="Set this variable to true to see the output in the docker log." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+</Container>
