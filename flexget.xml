@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>flexget</Name>
+  <Repository>cpoppema/docker-flexget</Repository>
+  <Registry>https://hub.docker.com/r/cpoppema/docker-flexget/</Registry>
+  <Network>docker</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/cpoppema/docker-flexget</Support>
+  <Project>https://flexget.com/</Project>
+  <Overview>FlexGet is a multipurpose automation tool for all of your media&#xD;
+&#xD;
+Support for torrents, nzbs, podcasts, comics, TV, movies, RSS, HTML, CSV, and more.</Overview>
+  <Category>Downloaders: Tools: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:5050]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/flexget.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>FlexGet is a multipurpose automation tool for all of your media&#xD;
+&#xD;
+Support for torrents, nzbs, podcasts, comics, TV, movies, RSS, HTML, CSV, and more.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5050</HostPort>
+        <ContainerPort>5050</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>WEB_PASSWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>TORRENT_PLUGIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>debug</Value>
+      <Name>FLEXGET_LOG_LEVEL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PIP_REQUIREMENTS_FILE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Webui Port" Target="5050" Default="" Mode="tcp" Description="Webui Port" Type="Port" Display="always" Required="false" Mask="false">5050</Config>
+  <Config Name="WEB_PASSWD" Target="WEB_PASSWD" Default="" Mode="" Description="Web UI password" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="TORRENT_PLUGIN" Target="TORRENT_PLUGIN" Default="transmission|deluge" Mode="" Description="the torrent plugin you need" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="/downloads" Target="/downloads" Default="" Mode="rw" Description="download folder" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="/config" Target="/config" Default="" Mode="rw" Description="location of FlexGet config.yml" Type="Path" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="FLEXGET_LOG_LEVEL" Target="FLEXGET_LOG_LEVEL" Default="" Mode="critical|error|warning|info|verbose|debug|trace" Description="Set the verbosity of the logger. Optional, defaults to debug if not set. Levels: critical, error, warning, info, verbose, debug, trace." Type="Variable" Display="advanced" Required="false" Mask="false">debug</Config>
+  <Config Name="PIP_REQUIREMENTS_FILE" Target="PIP_REQUIREMENTS_FILE" Default="" Mode="" Description="Install extra plugin packages you need." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+</Container>
