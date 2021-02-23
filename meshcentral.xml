@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>meshcentral</Name>
+  <Repository>uldiseihenbergs/meshcentral</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category>Tools: Network:Management Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/meshcentral.png</Icon>
+  <ExtraParams>--hostname=meshcentral.server.com</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/node/meshcentral/meshcentral-data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/node/meshcentral/meshcentral-files/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/node/meshcentral/meshcentral-web</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/node/meshcentral/meshcentral-backup</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Port 2" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Port 3" Target="8443" Default="" Mode="tcp" Description="Container Port: 8443" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Data" Target="/home/node/meshcentral/meshcentral-data" Default="" Mode="rw" Description="Container Path: /home/node/meshcentral/meshcentral-data" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Files" Target="/home/node/meshcentral/meshcentral-files/" Default="" Mode="rw" Description="Container Path: /home/node/meshcentral/meshcentral-files/" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Web" Target="/home/node/meshcentral/meshcentral-web" Default="" Mode="rw" Description="Container Path: /home/node/meshcentral/meshcentral-web" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Backup" Target="/home/node/meshcentral/meshcentral-backup" Default="" Mode="rw" Description="Container Path: /home/node/meshcentral/meshcentral-backup" Type="Path" Display="always" Required="false" Mask="false"></Config>
+</Container>

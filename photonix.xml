@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>photonix</Name>
+  <Repository>damianmoore/photonix</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/damianmoore/photonix</Support>
+  <Project>https://github.com/damianmoore/photonix</Project>
+  <Overview>Photonix is a photo management application based on web technologies. Run it on your home server and it will let you find what you want from your photo collection using any device. Smart filtering is made possible automatically by object recognition, location awareness, color analysis and other algorithms.</Overview>
+  <Category>MediaApp:Photos MediaServer:Photos Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/photonix.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Photonix is a photo management application based on web technologies. Run it on your home server and it will let you find what you want from your photo collection using any device. Smart filtering is made possible automatically by object recognition, location awareness, color analysis and other algorithms.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data/photos</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data/raw-photos-processed</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data/cache</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data/models</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>ENV</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>POSTGRES_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>POSTGRES_DB</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>POSTGRES_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>POSTGRES_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>REDIS_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>*</Value>
+      <Name>ALLOWED_HOSTS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ADMIN_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ADMIN_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DEMO</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Webui" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Photos" Target="/data/photos" Default="" Mode="rw" Description="Container Path: /data/photos" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Raw Photos" Target="/data/raw-photos-processed" Default="" Mode="rw" Description="Container Path: /data/raw-photos-processed" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Cache" Target="/data/cache" Default="" Mode="rw" Description="Container Path: /data/cache" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Models" Target="/data/models" Default="" Mode="rw" Description="Container Path: /data/models" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Environment" Target="ENV" Default="prd" Mode="" Description="In prd mode, running code and services are as optimised as possible. Running in dev mode enables features like Webpack/React hot module reloading (HMR), Django Runserver (code auto-reloading), Storybook server etc." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Postgres Host" Target="POSTGRES_HOST" Default="" Mode="" Description="Host name for Postgres database instance." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Postgres Database" Target="POSTGRES_DB" Default="" Mode="" Description="Database name for Postgres database instance, will be auto-created on first run if it doesn't exist." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Postgres User" Target="POSTGRES_USER" Default="" Mode="" Description="Username for Postgres database." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Postgres Password" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Password for Postgres database." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Redis Host" Target="REDIS_HOST" Default="" Mode="" Description="Redis hostname, used for resource locking." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Allowed Hosts" Target="ALLOWED_HOSTS" Default="'*'" Mode="" Description="Restricts access for Django backend to be accessed from just a certain hostname." Type="Variable" Display="always" Required="false" Mask="false">*</Config>
+  <Config Name="Admin Username" Target="ADMIN_USERNAME" Default="" Mode="" Description="Creates a username for the admin user on first run" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Admin Password" Target="ADMIN_PASSWORD" Default="" Mode="" Description="Sets password for the admin user on first run. If this is set but ADMIN_USERNAME is not, the username will be admin" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Demo Mode" Target="DEMO" Default="0" Mode="" Description="Starts the environment with a demo user account, library and downloads some demo photos. This is how the demo at https://demo.photonix.org/ runs" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>synapse</Name>
+  <Repository>matrixdotorg/synapse</Repository>
+  <Registry>https://hub.docker.com/r/matrixdotorg/synapse/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/matrix-org/synapse</Support>
+  <Project>https://matrix.org/docs/projects/server/synapse</Project>
+  <Overview>Synapse is the most widely installed Matrix homeserver implementation.  It is a reference "homeserver" implementation of Matrix from the core development team at matrix.org&#xD;
+&#xD;
+```&#xD;
+docker run -it --rm &#xD;
+-v /path/to/data:/data &#xD;
+-e SYNAPSE_SERVER_NAME=matrix.server.com &#xD;
+-e SYNAPSE_REPORT_STATS=yes &#xD;
+-e UID=99 &#xD;
+-e GID=100 &#xD;
+matrixdotorg/synapse:latest &#xD;
+generate&#xD;
+```</Overview>
+  <Category>Cloud: Network:Messenger Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/CHBMB/docker-templates/master/img/synapse.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Synapse is the most widely installed Matrix homeserver implementation.  It is a reference "homeserver" implementation of Matrix from the core development team at matrix.org&#xD;
+&#xD;
+```&#xD;
+docker run -it --rm &#xD;
+-v /path/to/data:/data &#xD;
+-e SYNAPSE_SERVER_NAME=matrix.server.com &#xD;
+-e SYNAPSE_REPORT_STATS=yes &#xD;
+-e UID=99 &#xD;
+-e GID=100 &#xD;
+matrixdotorg/synapse:latest &#xD;
+generate&#xD;
+```</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8008</HostPort>
+        <ContainerPort>8008</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Port" Target="8008" Default="" Mode="tcp" Description="Container Port: 8008" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+</Container>
